@@ -19,6 +19,6 @@ Crank is a coding judgement tool mirroring popular services like Codechef and Ha
 
 Licensing
 =========
-Project Culminate is licensed under the Apache License, Version 2.0. See
-[LICENSE](https://github.com/cvlnair/crank/blob/master/LICENSE) for the full
+Project Culminate is licensed under modified MIT Licence. See
+[LICENCE](https://github.com/cvlnair/crank/blob/master/LICENCE) for the full
 license text.

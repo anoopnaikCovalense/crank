@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5de274b9-72c3-4101-aff5-20a2c546e61e" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/public/js/mychalllenges.js" />
+      <change beforePath="$PROJECT_DIR$/.env.example" afterPath="$PROJECT_DIR$/.env" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Mychallenges.blade.php" afterPath="$PROJECT_DIR$/resources/views/Mychallenges.blade.php" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,105 +22,144 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name=".env.example" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.env.example">
+      <file leaf-file-name="Accept_Reject.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/Accept_Reject.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChallengeController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ChallengeController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="17" column="14" lean-forward="false" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
-              <folding>
-                <marker date="1538749376560" expanded="true" signature="3528:3928" ph="select count... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CompileRunController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CompileRunController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="25" column="8" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Controller.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="-1016">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HomeController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="481">
-              <caret line="57" column="8" lean-forward="false" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="8" />
               <folding>
-                <marker date="1538749455224" expanded="true" signature="530:968" ph="select chall... challenges" />
+                <marker date="1538748201350" expanded="true" signature="9:22" ph="..." />
+                <marker date="1538748201350" expanded="true" signature="33:42" ph="..." />
+                <marker date="1538748201350" expanded="true" signature="75:103" ph="..." />
+                <marker date="1538748201350" expanded="true" signature="973:990" ph="..." />
+                <marker date="1538748201350" expanded="true" signature="1065:1081" ph="..." />
+                <marker date="1538748201350" expanded="true" signature="1162:1183" ph="..." />
+                <marker date="1538748201350" expanded="true" signature="1261:1281" ph="..." />
+                <marker date="1538748201350" expanded="true" signature="1355:1378" ph="..." />
+                <marker date="1538748201350" expanded="true" signature="1455:1475" ph="..." />
+                <marker date="1538748201350" expanded="true" signature="1541:1557" ph="..." />
+                <marker date="1538748201350" expanded="true" signature="1938:1955" ph="..." />
+                <marker date="1538748201350" expanded="true" signature="2300:2319" ph="..." />
+                <marker date="1538748201350" expanded="true" signature="2447:2520" ph="..." />
+                <marker date="1538748201350" expanded="true" signature="2639:2712" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MailController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MailController.php">
+      <file leaf-file-name="home.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="-573">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1538748201354" expanded="true" signature="9:22" ph="..." />
+                <marker date="1538748201354" expanded="true" signature="33:42" ph="..." />
+                <marker date="1538748201354" expanded="true" signature="224:252" ph="..." />
+                <marker date="1538748201354" expanded="true" signature="397:417" ph="..." />
+                <marker date="1538748201354" expanded="true" signature="541:562" ph="..." />
+                <marker date="1538748201354" expanded="true" signature="696:710" ph="..." />
+                <marker date="1538748201354" expanded="true" signature="729:743" ph="..." />
+                <marker date="1538748201354" expanded="true" signature="817:852" ph="..." />
+                <marker date="1538748201354" expanded="true" signature="1188:1198" ph="..." />
+                <marker date="1538748201354" expanded="true" signature="1254:1269" ph="..." />
+                <marker date="1538748201354" expanded="true" signature="1362:1371" ph="..." />
+                <marker date="1538748201354" expanded="true" signature="1476:1485" ph="..." />
+                <marker date="1538748201354" expanded="true" signature="1516:1529" ph="..." />
+                <marker date="1538748201354" expanded="true" signature="1628:1637" ph="..." />
+                <marker date="1538748201354" expanded="true" signature="1809:1820" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="416">
+              <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+              <folding>
+                <marker date="1538750633899" expanded="true" signature="30:73" ph="..." />
+                <marker date="1538750633899" expanded="true" signature="361:389" ph="..." />
+                <marker date="1538750633899" expanded="true" signature="460:474" ph="..." />
+                <marker date="1538750633899" expanded="true" signature="498:519" ph="..." />
+                <marker date="1538750633899" expanded="true" signature="722:742" ph="..." />
+                <marker date="1538750633899" expanded="true" signature="783:818" ph="..." />
+                <marker date="1538750633899" expanded="true" signature="1058:1079" ph="..." />
+                <marker date="1538750633899" expanded="true" signature="1112:1134" ph="..." />
+                <marker date="1538750633899" expanded="true" signature="1744:1757" ph="..." />
+                <marker date="1538750633899" expanded="true" signature="2044:2069" ph="..." />
+                <marker date="1538750633899" expanded="true" signature="2692:2708" ph="..." />
+                <marker date="1538750633899" expanded="true" signature="2714:2727" ph="..." />
+                <marker date="1538750633899" expanded="true" signature="2878:2897" ph="..." />
+                <marker date="1538750633899" expanded="true" signature="2903:2919" ph="..." />
+                <marker date="1538750633899" expanded="true" signature="3309:3329" ph="..." />
+                <marker date="1538750633899" expanded="true" signature="3596:3613" ph="..." />
+                <marker date="1538750633899" expanded="true" signature="3834:3848" ph="..." />
+                <marker date="1538750633899" expanded="true" signature="3962:3979" ph="..." />
+                <marker date="1538750633899" expanded="true" signature="4336:4345" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mychalllenges.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/js/mychalllenges.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="4" column="18" lean-forward="false" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SubmissionController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SubmissionController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1816">
-              <caret line="96" column="8" lean-forward="false" selection-start-line="96" selection-start-column="8" selection-end-line="96" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/UserController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="7" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
+              <caret line="0" column="10" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Mychallenges.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/Mychallenges.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="211">
+              <caret line="28" column="112" lean-forward="false" selection-start-line="28" selection-start-column="97" selection-end-line="28" selection-end-column="112" />
+              <folding>
+                <marker date="1538750663287" expanded="true" signature="9:22" ph="..." />
+                <marker date="1538750663287" expanded="true" signature="33:42" ph="..." />
+                <marker date="1538750663287" expanded="true" signature="75:103" ph="..." />
+                <marker date="1538750663287" expanded="true" signature="495:516" ph="..." />
+                <marker date="1538750663287" expanded="true" signature="661:679" ph="..." />
+                <marker date="1538750663287" expanded="true" signature="744:769" ph="..." />
+                <marker date="1538750663287" expanded="true" signature="912:969" ph="..." />
+                <marker date="1538750663287" expanded="true" signature="1192:1209" ph="..." />
+                <marker date="1538750663287" expanded="true" signature="1253:1275" ph="..." />
+                <marker date="1538750663287" expanded="true" signature="1364:1380" ph="..." />
+                <marker date="1538750663287" expanded="true" signature="1906:1960" ph="..." />
+                <marker date="1538750663287" expanded="true" signature="2131:2155" ph="..." />
+                <marker date="1538750663287" expanded="true" signature="2425:2442" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>\&lt;\?php\n\nnamespace App\\Http\\Controllers\;\nuse Auth\;\nuse DB\;\nuse Illuminate\\Http\\Request\;\nuse App\\Challenge\;\nuse App\\User\;\nuse Illuminate\\Support\\Facades\\Redirect\;\nuse Carbon\\Carbon\;\n\n\n\nclass ChallengeController extends Controller\n\{   \n    \/\/store Challenge\n    public function store\(Request \$request\)  \n     \{         \n        \$submit \= new Challenge\;\n        \$submit\-\&gt;cname \= \$request\-\&gt;get\(\'challengename\'\)\;\n        \$submit\-\&gt;desc \= \$request\-\&gt;get\(\'description\'\)\;\n        \$submit\-\&gt;statement \= strip_tags\(\$request\-\&gt;get\(\'problemstatement\'\)\)\;\n        \$submit\-\&gt;ipformat \= strip_tags\(\$request\-\&gt;get\(\'inputformat\'\)\)\;\n        \$submit\-\&gt;constraints \= strip_tags\(\$request\-\&gt;get\(\'constraints\'\)\)\;\n        \$submit\-\&gt;opformat \= strip_tags\(\$request\-\&gt;get\(\'outputformat\'\)\)\;\n        \$submit\-\&gt;tags \= \$request\-\&gt;get\(\'tags\'\)\;\n        \$submit\-\&gt;user_id\=Auth\:\:user\(\)\-\&gt;id\;\n        \$submit\-\&gt;save\(\)\;\n        return redirect\(\)\-\&gt;route\(\'home\'\)\;\n      \n   \}\n   \/\/validate challenge\n   protected function validator\(Request \$request\)\n   \{\n\n    \$request\-\&gt;validate\(\[\n        \'cname\' \=\&gt; \'required\|min\:5\'\,\n        \'desc\' \=\&gt; \'required\|min\:5\'\,\n        \'statement\' \=\&gt; \'required\|min\:5\'\,\n           \'ipformat\' \=\&gt; \'required\|min\:5\'\,\n           \'constraints\' \=\&gt; \'required\|min\:5\'\,\n           \'opformat\' \=\&gt; \'required\|min\:5\'\,\n           \'testcaseipformat\'\=\&gt; \'required\|min\:5\'\,\n           \'testcaseopformat\'\=\&gt; \'required\|min\:5\'\,\n           \'tags\' \=\&gt; \'required\|min\:5\'\,\n        \]\,\[\n        \'cname\.required\' \=\&gt; \'Challenge  is required\'\,\n\n                \'desc\.required\' \=\&gt; \'Description is required\'\,\n                 \'statement\.required\' \=\&gt; \'statement is required\'\,\n\n\n                 \'ipformat\.required\' \=\&gt; \'Input format  is required\'\,\n                    \'constraints\.required\' \=\&gt; \'Constraints is required\'\,\n                \'opformat\.required\' \=\&gt; \'Output format is required\'\,\n                \'testcaseipformat\.required\' \=\&gt; \'Test Case Input format  is required\'\,\n                \'testcaseopformat\.required\' \=\&gt; \'Test Case Optput format  is required\'\,\n               \'tags\.required\' \=\&gt; \'Tags is required\'\,\n    \]\)\;\n\n    \n    \$challenge\=new Challenge\(\)\;\n      \$challenge\-\&gt;cname \= \$request\-\&gt;get\(\'cname\'\)\;\n      \$challenge\-\&gt;desc \= \$request\-\&gt;get\(\'desc\'\)\;\n      \$challenge\-\&gt;statement \= strip_tags\(\$request\-\&gt;get\(\'statement\'\)\)\;\n      \$challenge\-\&gt;ipformat \= strip_tags\(\$request\-\&gt;get\(\'ipformat\'\)\)\;\n      \$challenge\-\&gt;constraints \= strip_tags\(\$request\-\&gt;get\(\'constraints\'\)\)\;\n      \$challenge\-\&gt;opformat \= strip_tags\(\$request\-\&gt;get\(\'opformat\'\)\)\;\n      \$challenge\-\&gt;testcaseipformat \= \$request\-\&gt;get\(\'testcaseipformat\'\)\;\n      \$challenge\-\&gt;testcaseopformat \= \$request\-\&gt;get\(\'testcaseopformat\'\)\;\n      \$challenge\-\&gt;tags \= \(\$request\-\&gt;get\(\'tags\'\)\)\;\n      \$challenge\-\&gt;user_id\=Auth\:\:user\(\)\-\&gt;id\;\n      \$challenge\-\&gt;save\(\)\;\n    \n  return Redirect\:\:to\(\'home\'\)\-\&gt;withInput\(\)\-\&gt;withErrors\(array\(\'msg\' \=\&gt; \&quot;Challenge Saved Sucessfully\&quot;\)\)\;\n\n\n\n   \}\n   \/\/Selected Challenge Details to Solve\n   public function challenge_details\(\)\n   \{\n        \$prob\=Challenge\:\:find\(\$_REQUEST\[\'cid\'\]\)\;\n        return view\(\'partials\.editor\'\,\[\'challenge\'\=\&gt;\$prob\]\)\;\n   \}\n  \/\/CHlalnges User Created\n   public function mychallenges\(\)\n   \{\n        \n      \$challenges \= DB\:\:select\(\'select count\(\*\) count\,submissions\.challenge_id\,\n       challenges\.cname\,challenges\.desc\,challenges\.created_at FROM challenges    \n       left join submissions  on challenges\.id\=submissions\.challenge_id where challenges\.user_id\=\'\.Auth\:\:user\(\)\-\&gt;id\.\' and challenges\.active\=1\n       group by submissions\.challenge_id\,challenges\.cname\,challenges\.desc\,challenges\.created_at  order by challenges\.id DESC\;\n      \'\)\;\n       foreach\(\$challenges as \$challenge\)\n         \{\n            \$parsed\=Carbon\:\:parse\(\$challenge\-\&gt;created_at\)\-\&gt;diffForHumans\(\)\;\n            \$challenge\-\&gt;parsedTime\=\$parsed\;\n\n         \}   \n       return view\(\'Mychallenges\'\,\[\'challenges\'\=\&gt;\$challenges\]\)\;\n       \n   \}\n   \/\/Prev challenge Details to update\n   public function prevdetails\(\)\n   \{\n    \$challenges\=Challenge\:\:find\(\$_REQUEST\[\'cid\'\]\)\;\n       return view\(\'Update\'\,\[\'challenge\'\=\&gt;\$challenges\]\)\;\n\n   \}\n\npublic function edit\(Request \$request\)\n\{\n   \n            \$cid\=\$_REQUEST\[\'cid\'\]\;   \n            \$submit\=Challenge\:\:find\(\$cid\)\;\n            \$submit\-\&gt;cname \= \$request\-\&gt;get\(\'challengename\'\)\;\n            \$submit\-\&gt;desc \= \$request\-\&gt;get\(\'description\'\)\;\n            \$submit\-\&gt;statement \= strip_tags\(\$request\-\&gt;get\(\'problemstatement\'\)\)\;\n            \$submit\-\&gt;ipformat \= strip_tags\(\$request\-\&gt;get\(\'inputformat\'\)\)\;\n            \$submit\-\&gt;constraints \= strip_tags\(\$request\-\&gt;get\(\'constraints\'\)\)\;\n            \$submit\-\&gt;opformat \= strip_tags\(\$request\-\&gt;get\(\'outputformat\'\)\)\;\n            \$submit\-\&gt;tags \= \$request\-\&gt;get\(\'tags\'\)\;\n            \$submit\-\&gt;user_id\=Auth\:\:user\(\)\-\&gt;id\;\n            \$submit\-\&gt;save\(\)\;\n       \n        return redirect\(\)\-\&gt;route\(\'mychallenges\'\)\;\n\}\n   \n   public function delete\(Request \$request\)\n   \{\n   \n     \n  \$challenges\=Challenge\:\:find\(\$request\-\&gt;get\(\'cid\'\)\)\;\n  \$challenges\-\&gt;active\=0\;\n  \n  \$challenges\-\&gt;save\(\)\;\n  \$VALUE\=true\;\n\n  if\(\$VALUE\=\=\=true\)\n  \{\n      return \&quot;true\&quot;\;\n  \}\n  else\n  \{\n    return \&quot;false\&quot;\;\n  \}\n  \n   \n\}\n\n\}</find>
+      <find>button</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -127,17 +171,27 @@
         <option value="$PROJECT_DIR$/.env.example" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ChallengeController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/CompileRunController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/MailController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/SubmissionController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/UserController.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/Mychallenges.blade.php" />
+        <option value="$PROJECT_DIR$/public/js/mychalllenges.js" />
       </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
     <package-json value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
   </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
@@ -251,6 +305,48 @@
               <item name="crank" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="crank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crank" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Http" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="crank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crank" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="crank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crank" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="crank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crank" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="crank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crank" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="crank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crank" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="layouts" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="crank" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crank" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="partials" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -265,6 +361,8 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -291,20 +389,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1538748985864</updated>
-      <workItem from="1538748987454" duration="719000" />
+      <workItem from="1538748987454" duration="1730000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="719000" />
+    <option name="totallyTimeSpent" value="1730000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="696" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.50292826" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.49707174" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -322,6 +420,27 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -334,10 +453,34 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.env.example">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SubmissionController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1816">
+          <caret line="96" column="8" lean-forward="false" selection-start-line="96" selection-start-column="8" selection-end-line="96" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="40">
+          <caret line="2" column="4" lean-forward="false" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CompileRunController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="21" column="61" lean-forward="false" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
           <folding />
         </state>
       </provider>
@@ -352,15 +495,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CompileRunController.php">
+    <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="25" column="8" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+        <state relative-caret-position="220">
+          <caret line="11" column="12" lean-forward="true" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
+    <entry file="file://$PROJECT_DIR$/app/User.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -368,13 +511,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
+    <entry file="file://$PROJECT_DIR$/app/Submission.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="481">
-          <caret line="57" column="8" lean-forward="false" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="8" />
-          <folding>
-            <marker date="1538749455224" expanded="true" signature="530:968" ph="select chall... challenges" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Challenge.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -382,14 +531,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SubmissionController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1816">
-          <caret line="96" column="8" lean-forward="false" selection-start-line="96" selection-start-column="8" selection-end-line="96" selection-end-column="8" />
           <folding />
         </state>
       </provider>
@@ -402,10 +543,125 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="13" column="4" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+          <folding>
+            <marker date="1538750176753" expanded="true" signature="531:969" ph="select chall... challenges" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Accept_Reject.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1016">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1538748201350" expanded="true" signature="9:22" ph="..." />
+            <marker date="1538748201350" expanded="true" signature="33:42" ph="..." />
+            <marker date="1538748201350" expanded="true" signature="75:103" ph="..." />
+            <marker date="1538748201350" expanded="true" signature="973:990" ph="..." />
+            <marker date="1538748201350" expanded="true" signature="1065:1081" ph="..." />
+            <marker date="1538748201350" expanded="true" signature="1162:1183" ph="..." />
+            <marker date="1538748201350" expanded="true" signature="1261:1281" ph="..." />
+            <marker date="1538748201350" expanded="true" signature="1355:1378" ph="..." />
+            <marker date="1538748201350" expanded="true" signature="1455:1475" ph="..." />
+            <marker date="1538748201350" expanded="true" signature="1541:1557" ph="..." />
+            <marker date="1538748201350" expanded="true" signature="1938:1955" ph="..." />
+            <marker date="1538748201350" expanded="true" signature="2300:2319" ph="..." />
+            <marker date="1538748201350" expanded="true" signature="2447:2520" ph="..." />
+            <marker date="1538748201350" expanded="true" signature="2639:2712" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-573">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1538748201354" expanded="true" signature="9:22" ph="..." />
+            <marker date="1538748201354" expanded="true" signature="33:42" ph="..." />
+            <marker date="1538748201354" expanded="true" signature="224:252" ph="..." />
+            <marker date="1538748201354" expanded="true" signature="397:417" ph="..." />
+            <marker date="1538748201354" expanded="true" signature="541:562" ph="..." />
+            <marker date="1538748201354" expanded="true" signature="696:710" ph="..." />
+            <marker date="1538748201354" expanded="true" signature="729:743" ph="..." />
+            <marker date="1538748201354" expanded="true" signature="817:852" ph="..." />
+            <marker date="1538748201354" expanded="true" signature="1188:1198" ph="..." />
+            <marker date="1538748201354" expanded="true" signature="1254:1269" ph="..." />
+            <marker date="1538748201354" expanded="true" signature="1362:1371" ph="..." />
+            <marker date="1538748201354" expanded="true" signature="1476:1485" ph="..." />
+            <marker date="1538748201354" expanded="true" signature="1516:1529" ph="..." />
+            <marker date="1538748201354" expanded="true" signature="1628:1637" ph="..." />
+            <marker date="1538748201354" expanded="true" signature="1809:1820" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="7" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
+          <caret line="0" column="10" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding>
+            <marker date="1538750633899" expanded="true" signature="30:73" ph="..." />
+            <marker date="1538750633899" expanded="true" signature="361:389" ph="..." />
+            <marker date="1538750633899" expanded="true" signature="460:474" ph="..." />
+            <marker date="1538750633899" expanded="true" signature="498:519" ph="..." />
+            <marker date="1538750633899" expanded="true" signature="722:742" ph="..." />
+            <marker date="1538750633899" expanded="true" signature="783:818" ph="..." />
+            <marker date="1538750633899" expanded="true" signature="1058:1079" ph="..." />
+            <marker date="1538750633899" expanded="true" signature="1112:1134" ph="..." />
+            <marker date="1538750633899" expanded="true" signature="1744:1757" ph="..." />
+            <marker date="1538750633899" expanded="true" signature="2044:2069" ph="..." />
+            <marker date="1538750633899" expanded="true" signature="2692:2708" ph="..." />
+            <marker date="1538750633899" expanded="true" signature="2714:2727" ph="..." />
+            <marker date="1538750633899" expanded="true" signature="2878:2897" ph="..." />
+            <marker date="1538750633899" expanded="true" signature="2903:2919" ph="..." />
+            <marker date="1538750633899" expanded="true" signature="3309:3329" ph="..." />
+            <marker date="1538750633899" expanded="true" signature="3596:3613" ph="..." />
+            <marker date="1538750633899" expanded="true" signature="3834:3848" ph="..." />
+            <marker date="1538750633899" expanded="true" signature="3962:3979" ph="..." />
+            <marker date="1538750633899" expanded="true" signature="4336:4345" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/Mychallenges.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="28" column="112" lean-forward="false" selection-start-line="28" selection-start-column="97" selection-end-line="28" selection-end-column="112" />
+          <folding>
+            <marker date="1538750663287" expanded="true" signature="9:22" ph="..." />
+            <marker date="1538750663287" expanded="true" signature="33:42" ph="..." />
+            <marker date="1538750663287" expanded="true" signature="75:103" ph="..." />
+            <marker date="1538750663287" expanded="true" signature="495:516" ph="..." />
+            <marker date="1538750663287" expanded="true" signature="661:679" ph="..." />
+            <marker date="1538750663287" expanded="true" signature="744:769" ph="..." />
+            <marker date="1538750663287" expanded="true" signature="912:969" ph="..." />
+            <marker date="1538750663287" expanded="true" signature="1192:1209" ph="..." />
+            <marker date="1538750663287" expanded="true" signature="1253:1275" ph="..." />
+            <marker date="1538750663287" expanded="true" signature="1364:1380" ph="..." />
+            <marker date="1538750663287" expanded="true" signature="1906:1960" ph="..." />
+            <marker date="1538750663287" expanded="true" signature="2131:2155" ph="..." />
+            <marker date="1538750663287" expanded="true" signature="2425:2442" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/mychalllenges.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="18" lean-forward="false" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
           <folding />
         </state>
       </provider>

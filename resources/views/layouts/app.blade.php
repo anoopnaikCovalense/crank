@@ -15,10 +15,10 @@
 
     <title>
     {{ config('', 'CRANK') }}</title>
-    
-  
 
-  
+
+
+
 <!-- <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -34,9 +34,11 @@
     <!-- Styles -->
     <script src="{{ asset('js/main.js') }}" ></script>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" 
-    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
     crossorigin="anonymous">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
     <style>
     .navbar>.container, .navbar>.container-fluid
     {
@@ -52,9 +54,9 @@
             <div class="container">
                 <a class="navbar-brand" href="{{ url('home') }}">
             <img src="crank.jpg"   height="38vh"width="85vw">
-   
+
                 </a>
-               
+
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -102,7 +104,7 @@
         <div >
             @yield('content')
         </div>
- 
+
     </div>
 
 </body>

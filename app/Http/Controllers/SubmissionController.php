@@ -3,15 +3,19 @@
 namespace App\Http\Controllers;
 use Auth;
 use Illuminate\Http\Request;
-use App\Submission; 
+use App\Submission;
 use App\User;
 use App\Challenge;
 use Carbon\Carbon;
 class SubmissionController extends Controller
 {
-   //store Submission
-    public function store(Request $request)  
-    {     
+    /**
+     * Store submissions
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function store(Request $request)
+    {
        $submit = new Submission;
        $submit->code =$_POST['code'];
        $submit->language =$_POST['language'];
@@ -23,13 +27,17 @@ class SubmissionController extends Controller
        $submit->save();
        return redirect()->route('submissions');
 
-   
-    
+
+
   }
-    //Challenges Submitted by the User
+
+    /**
+     * Challenges Submitted by the User
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function challenges_submitted()
      {
-  
+
     $challenges =Challenge::
             join('submissions','challenges.id', '=', 'submissions.challenge_id')
             ->where('submissions.user_id','=',Auth::user()->id)
@@ -40,38 +48,55 @@ class SubmissionController extends Controller
             $parsed=Carbon::parse($challenge->created_at)->diffForHumans();
             $challenge->parsedTime=$parsed;
 
-         }   
-    
+         }
+
        return view('submission',['challenges'=>$challenges]);
     }
-    //Submitted Details
+
+
+    /**
+     * Submitted Details
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function submission_details(){
         $submission=Submission::where('challenge_id','=',$_REQUEST['cid'])
         ->where('user_id','=',Auth::user()->id)
         ->where('submissions.id','=',$_REQUEST['sid'])->get();
         $prob=Challenge::find($_REQUEST['cid']);
-        
+
         return view('submissionpage',['sub'=>$submission,'challenge'=>$prob]);
     }
-    //submitted users details
+
+    /** Submitted users details
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+
     public function submitted_users()
-    {  
+    {
         $challenge=Challenge::find($_REQUEST['cid']);
         $submissions=Submission::where('challenge_id','=',$_REQUEST['cid'])
         ->join('users','users.id','=','submissions.user_id')
-        ->get(['users.name','submissions.id','submissions.status']);      
-                                                                                                                                     
-        
+        ->get(['users.name','submissions.id','submissions.status']);
+
+
         return view('SubmittedUsers',['challenge'=>$challenge,'submission'=>$submissions]);
     }
-    //accept or reject
+
+    /**
+     * Accept or reject
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function Accept_Reject()
     {   $submission=Submission::find($_REQUEST['submissionid']);
         $challenge=Challenge::find($_REQUEST['challengeid']);
-        
+
         return view('Accept_Reject',['submission'=>$submission,'challenge'=>$challenge]);
     }
-    //set status Accept or Reject
+
+    /**
+     * Set status Accept or Reject
+     * @return \Illuminate\Http\RedirectResponse
+     */
     public function set_status()
     {
         $submission=Submission::find($_REQUEST['submissionid']);
@@ -79,5 +104,5 @@ class SubmissionController extends Controller
         $submission->save();
         return redirect()->route('submittedusers',['submission'=>$submission,'cid'=>$submission->challenge_id]);
     }
-   
+
 }

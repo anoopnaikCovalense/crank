@@ -23,12 +23,12 @@ class HomeController extends Controller
 
     /*
       Show the application dashboard.
-     
+
       @return \Illuminate\Http\Response
      */
 
     public function index()
-    {   
+    {
         $challenges = DB::select('select challenges.tags,challenges.desc,challenges.created_at,challenges.id,count(submissions.id) as counts ,challenges.cname,U.name 
         from challenges left join submissions
         on challenge_id=challenges.id left join users U 
@@ -39,19 +39,29 @@ class HomeController extends Controller
             $parsed=Carbon::parse($challenge->created_at)->diffForHumans();
             $challenge->parsedTime=$parsed;
 
-         }   
+         }
         return view('home',['challs'=>$challenges]);
     }
-    //new challenge
+
+
+    /**
+     * New challenge page
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
     public function newchallenge()
     {
         return view('newchallengepage');
-    }   
-    //update page
+    }
+
+
+    /**
+     * Update page
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+     */
+
     public function update()
     {
         return view ('Update');
     }
-   
+
 }
-    

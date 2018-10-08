@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSubmisisonsTable extends Migration
+class CreateSubmissionsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,17 @@ class CreateSubmisisonsTable extends Migration
      */
     public function up()
     {
-        Schema::create('submisisons', function (Blueprint $table) {
+        Schema::create('submissions', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id')->unsigned()->index();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('CASCADE');
             $table->integer('challenge_id')->unsigned()->index();
             $table->foreign('challenge_id')->references('id')->on('challenges')->onDelete('CASCADE');
-            $table->string('code');
-            $table->string('cstatus');
-            $table->string('rstatus');
+            $table->longText('code');
+            $table->longText('cstatus');
+            $table->longText('rstatus');
             $table->string('language');
-            $table->string('output');
+            $table->longText('output');
             $table->string('status')->default('pending');
             $table->timestamps();
         });

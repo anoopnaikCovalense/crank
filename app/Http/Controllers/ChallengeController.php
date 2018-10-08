@@ -21,18 +21,20 @@ class ChallengeController extends Controller
      */
     public function store(Request $request)
     {
-        $submit = new Challenge;
-        $submit->cname = $request->get('challengename');
-        $submit->desc = $request->get('description');
-        $submit->statement = strip_tags($request->get('problemstatement'));
-        $submit->ipformat = strip_tags($request->get('inputformat'));
-        $submit->constraints = strip_tags($request->get('constraints'));
-        $submit->opformat = strip_tags($request->get('outputformat'));
-        $submit->tags = $request->get('tags');
-        $submit->user_id = Auth::user()->id;
-        $submit->save();
-        return redirect()->route('home');
-
+        
+        $challenge = new Challenge();
+        $challenge->cname = $request->get('cname');
+        $challenge->desc = $request->get('desc');
+        $challenge->statement = strip_tags($request->get('statement'));
+        $challenge->ipformat = strip_tags($request->get('ipformat'));
+        $challenge->constraints = strip_tags($request->get('constraints'));
+        $challenge->opformat = strip_tags($request->get('opformat'));
+        $challenge->testcaseipformat = $request->get('testcaseipformat');
+        $challenge->testcaseopformat = $request->get('testcaseopformat');
+        $challenge->tags = ($request->get('tags'));
+        $challenge->user_id = Auth::user()->id;
+        $challenge->save();
+        MailController::createNewChallenge($challenge);
     }
 
     /**
@@ -68,22 +70,8 @@ class ChallengeController extends Controller
             'tags.required' => 'Tags is required',
         ]);
 
-
-        $challenge = new Challenge();
-        $challenge->cname = $request->get('cname');
-        $challenge->desc = $request->get('desc');
-        $challenge->statement = strip_tags($request->get('statement'));
-        $challenge->ipformat = strip_tags($request->get('ipformat'));
-        $challenge->constraints = strip_tags($request->get('constraints'));
-        $challenge->opformat = strip_tags($request->get('opformat'));
-        $challenge->testcaseipformat = $request->get('testcaseipformat');
-        $challenge->testcaseopformat = $request->get('testcaseopformat');
-        $challenge->tags = ($request->get('tags'));
-        $challenge->user_id = Auth::user()->id;
-        $challenge->save();
-
+        $this->store($request);    
         return Redirect::to('home')->withInput()->withErrors(array('msg' => "Challenge Saved Sucessfully"));
-
 
     }
 
@@ -105,10 +93,10 @@ class ChallengeController extends Controller
     public function mychallenges()
     {
 
-        $challenges = DB::select('select count(*) count,submissions.challenge_id,
+        $challenges = DB::select('select count(*) count,challenges.id,
        challenges.cname,challenges.desc,challenges.created_at FROM challenges    
        left join submissions  on challenges.id=submissions.challenge_id where challenges.user_id=' . Auth::user()->id . ' and challenges.active=1
-       group by submissions.challenge_id,challenges.cname,challenges.desc,challenges.created_at  order by challenges.id DESC;
+       group by challenges.id,challenges.cname,challenges.desc,challenges.created_at  order by challenges.id DESC;
       ');
         foreach ($challenges as $challenge) {
             $parsed = Carbon::parse($challenge->created_at)->diffForHumans();
@@ -149,6 +137,8 @@ class ChallengeController extends Controller
         $submit->constraints = strip_tags($request->get('constraints'));
         $submit->opformat = strip_tags($request->get('outputformat'));
         $submit->tags = $request->get('tags');
+        $submit->testcaseipformat = $request->get('testcaseipformat');
+        $submit->testcaseopformat = $request->get('testcaseopformat');
         $submit->user_id = Auth::user()->id;
         $submit->save();
 

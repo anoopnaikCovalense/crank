@@ -106,7 +106,7 @@
                padding-bottom: 30px;
             }
         </style>
-<script src="https://cdn.ckeditor.com/4.10.0/standard-all/ckeditor.js"></script>
+<script src="https://cdn.ckeditor.com/4.10.0/full-all/ckeditor.js"></script>
 <script>
 var allEditors = document.querySelectorAll('.ckeditor');
 for (var i = 0; i < allEditors.length; ++i) {

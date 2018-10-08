@@ -35,13 +35,14 @@ class HomeController extends Controller
         on challenge_id=challenges.id left join users U 
         on U.id = submissions.user_id 
         where challenges.active=1 group by  challenges.tags,challenges.id,challenges.desc,challenges.cname,U.name,challenges.created_at order by challenges.id DESC ');
+        $user=user::find(Auth::user()->id);
         foreach($challenges as $challenge)
          {
             $parsed=Carbon::parse($challenge->created_at)->diffForHumans();
             $challenge->parsedTime=$parsed;
 
          }
-        return view('home',['challs'=>$challenges]);
+        return view('home',['challs'=>$challenges,'user'=>$user]);
     }
 
 

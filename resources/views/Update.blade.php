@@ -66,14 +66,14 @@
   <div class="row " style="padding-bottom: 30px;">
     <label class=" col-md-3"  for="challengename"><b> TestCase InputFormat :</b> </label>
     <div class="col-md-9">
-    <input class="form-control form-control-lg" id="inputsm" type="text" value="{{$challenge->testcaseipformat}}" name="challengename" class="span12">
+    <input class="form-control form-control-lg" id="testcaseipformat" type="text" value="{{$challenge->testcaseipformat}}" name="testcaseipformat" class="span12">
     </div>
   </div>
 
 <div class="row " style="padding-bottom: 30px;">
     <label class=" col-md-3"  for="challengename"><b> TestCase OutputFormat :</b> </label>
     <div class="col-md-9">
-    <input class="form-control form-control-lg" id="inputsm" type="text" name="challengename"  value="{{$challenge->testcaseopformat}}"class="span12">
+    <input class="form-control form-control-lg" id="testcaseopformat" type="text" name="testcaseopformat"  value="{{$challenge->testcaseopformat}}"class="span12">
     </div>
   </div>      
   <div class="row ">
@@ -101,7 +101,7 @@
                padding-bottom: 30px;
             }
         </style>
-<script src="https://cdn.ckeditor.com/4.10.0/standard-all/ckeditor.js"></script>
+<script src="https://cdn.ckeditor.com/4.10.0/full-all/ckeditor.js"></script>
 
 <script>
 

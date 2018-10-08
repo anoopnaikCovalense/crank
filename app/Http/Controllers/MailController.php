@@ -10,17 +10,23 @@ use App\User;
 class MailController extends Controller
 {
 
-    public function send()
+    public static function createNewChallenge($challenge)
     {
+        $users = array(User::where('id', '!=', Auth::user()->id)->get(['email', 'name']));
+        
+        foreach ($users as $user)
+        {
+            
+            Mail::send('template/createNewChallengeMail',['user'=>$user,'challenge'=>$challenge],
+             function ($message)
+              use($user, $challenge) {
+                $message->to('karthikeyan.prabhakaran@covalense.com', $user[0]->name)->subject('New Challenge: ' . $challenge->cname);
+                $message->from(env('FROM_EMAIL'), 'cRank');
+            });
 
+        }
 
-        $data = array(User::where('id', '!=', Auth::user()->id)->get(['email', 'name']));
-        Mail::send('template/sendtoAll', $data, function ($message) {
-            $message->to('ankitguptag34@gmail.com', 'John Smith')->subject('Welcome!');
-            $message->from('ankitguptag34@gmail.com', 'Ankit');
-
-        });
-
-
+        return true;
+        
     }
 }

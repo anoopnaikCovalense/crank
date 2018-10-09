@@ -24,8 +24,8 @@
                         <b><span style="color:black">{{$ch->cname}}</span></b></h5>
                             <small>{{$ch->parsedTime}}</small>
                 </div>
-                <p class="mb-1"><span style="color:blue">{{$ch->desc}}Lorem ipsum dolor sit amet, conse irure dolor.</span></p>
-                <small><b>Created by : </b>{{$ch->name}}</small>
+                <p class="mb-1"><span style="color:blue">{{$ch->desc}}</span></p>
+                <small><b>Created by : </b>{{$user->name}}</small>
                 @if($ch->tags!="")
                     <div class="text-left"><i class="fas fa-tags"style="color:black"></i>&nbsp;{{$ch->tags}}</div>
                 @endif

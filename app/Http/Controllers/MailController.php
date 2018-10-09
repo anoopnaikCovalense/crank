@@ -6,6 +6,7 @@ use Auth;
 use Illuminate\Http\Request;
 use Mail;
 use App\User;
+use App\Mail\challengeCreated;
 
 class MailController extends Controller
 {
@@ -16,14 +17,8 @@ class MailController extends Controller
         
         foreach ($users as $user)
         {
-            
-            Mail::send('template/createNewChallengeMail',['user'=>$user,'challenge'=>$challenge],
-             function ($message)
-              use($user, $challenge) {
-                $message->to('karthikeyan.prabhakaran@covalense.com', $user[0]->name)->subject('New Challenge: ' . $challenge->cname);
-                $message->from(env('FROM_EMAIL'), 'cRank');
-            });
-
+            echo $user[0]->email . PHP_EOL;
+            Mail::to($user[0]->email)->send(new challengeCreated($user, $challenge));
         }
 
         return true;

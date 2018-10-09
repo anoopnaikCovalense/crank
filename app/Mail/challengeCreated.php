@@ -7,18 +7,22 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class SendMail extends Mailable
+class challengeCreated extends Mailable 
 {
     use Queueable, SerializesModels;
+    
+    public $user;
+    public $challenge;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($user, $challenge)
     {
-        //
+        $this->user         = $user;
+        $this->challenge    = $challenge;
     }
 
     /**
@@ -28,6 +32,6 @@ class SendMail extends Mailable
      */
     public function build()
     {
-        return $this->view('view.name');
+        return $this->subject('New Challenge: ' . $this->challenge->cname)->view('email.challenges.new');
     }
 }

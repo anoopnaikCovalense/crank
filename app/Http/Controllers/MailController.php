@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Auth;
-use Illuminate\Http\Request;
 use Mail;
 use App\User;
 use App\Mail\challengeCreated;
+use App\Mail\emailVerification;
 
 class MailController extends Controller
 {
@@ -21,6 +21,11 @@ class MailController extends Controller
         }
 
         return true;
-        
+    }
+    
+    public function send()
+    {
+        $user = User::where('email', '=', 'anoct92018@yopmail.com')->first();
+        Mail::to($user->email)->send(new emailVerification($user));
     }
 }

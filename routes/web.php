@@ -51,4 +51,4 @@ Route::get('/submittedusers','SubmissionController@submitted_users')->name('subm
  //validator
  Route::post('/validator', 'ChallengeController@validator')->name('validator');
 //===========================================================================
-
+Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify')->name('verify');

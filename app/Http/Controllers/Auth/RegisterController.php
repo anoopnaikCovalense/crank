@@ -7,6 +7,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use App\Mail\emailVerification;
+use Mail;
+use Illuminate\Http\Request;
 
 class RegisterController extends Controller
 {
@@ -68,6 +71,37 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'isAdmin' => false,
+            'emailToken' => base64_encode($data['email']),
         ]);
+    }
+    
+    /**
+     * Handle a registration request for the application.
+     *
+     * @param \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\Response
+     */
+    public function register(Request $request)
+    {
+        $this->validator($request->all())->validate();
+        $user = $this->create($request->all());
+        Mail::to($user->email)->queue(new emailVerification($user));
+        return view('emailVerification');
+    }
+
+    /**
+     * Handle a registration request for the application.
+     *
+     * @param $token
+     * @return \Illuminate\Http\Response
+     */
+    public function verify($token)
+    {
+        $user = User::where('emailToken', $token)->first();
+        $user->isVerified = 1;
+
+        if($user->save()){
+            return view('emailConfirm', ['user' => $user]);
+        }
     }
 }

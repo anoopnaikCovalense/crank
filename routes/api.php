@@ -17,7 +17,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 //Compile and Run API Methods
+Route::post('/compilehack','CompileRunHackController@comp_run');
 Route::post('/compile','CompileRunController@comp_run');
-//Store Submisison
+
+//Store Submissison
 Route::post('/store','SubmissionController@store');
 

@@ -1,10 +1,13 @@
 @extends('layouts.app')
 @section('content')
+<link rel="stylesheet" href="{{ URL::asset('css/main.css') }}"/>
 <div class="container text-center" style="  padding-top:10px;"><div>
+<div></div>
      <div class="row">
-            <div class="col-md-6 text-left">
-            <link rel="stylesheet" href="{{ URL::asset('css/main.css') }}" />
+            <div class="col-md-6 text-left" style="padding-top:15px">   
+                       
             </div>
+           
             <div class="col-md-6 text-right">
                     <br>
                 
@@ -25,7 +28,7 @@
                             <small>{{$ch->parsedTime}}</small>
                 </div>
                 <p class="mb-1"><span style="color:blue">{{$ch->desc}}</span></p>
-                <small><b>Created by : </b>{{$user->name}}</small>
+                <small><b>Created by : </b>{{$ch->name}}</small>
                 @if($ch->tags!="")
                     <div class="text-left"><i class="fas fa-tags"style="color:black"></i>&nbsp;{{$ch->tags}}</div>
                 @endif

@@ -17,7 +17,7 @@ class MailController extends Controller
         
         foreach ($users as $user)
         {
-            Mail::to($user->email)->send(new challengeCreated($user, $challenge));
+            Mail::to($user->email)->queue(new challengeCreated($user, $challenge, Auth::user()->name));
         }
 
         return true;

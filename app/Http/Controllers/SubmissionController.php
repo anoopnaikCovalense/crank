@@ -25,10 +25,8 @@ class SubmissionController extends Controller
        $submit->user_id=$_POST['uid'];
        $submit->output=$_POST['output'];
        $submit->save();
+       MailController::SubmitChallenge($submit);
        return redirect()->route('submissions');
-
-
-
   }
 
     /**
@@ -77,8 +75,6 @@ class SubmissionController extends Controller
         $submissions=Submission::where('challenge_id','=',$_REQUEST['cid'])
         ->join('users','users.id','=','submissions.user_id')
         ->get(['users.name','submissions.id','submissions.status']);
-
-
         return view('SubmittedUsers',['challenge'=>$challenge,'submission'=>$submissions]);
     }
 

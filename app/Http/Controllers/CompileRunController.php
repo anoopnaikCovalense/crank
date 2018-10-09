@@ -35,9 +35,21 @@ class CompileRunController extends Controller
 
         //Sending request to the API to compile and run and record JSON responses
 
-        $test = new CompileRun();
-        $response = $test->run($hackerearth, $config); // Use this $response the way you want , it consists data in PHP Array
+        // $test = new CompileRun();
+        // $response = $test->run($hackerearth, $config); // Use this $response the way you want , it consists data in PHP Array
 
+           
+            //Printing the response
+            // echo"Status:".print_r($response,1);
+            //echo"<pre>".print_r($response,1)."</pre>";
+            //$results = print_r($response, 1);
+            //return response()->json($response);
+
+            $response=array(
+            "status"=>"OK",
+            "output"=>"Your output is here!!",
+            "body"=>array("run_status"=>array("compile_status"=>"OK","stderr"=>"","status_detail"=>"OK")));
+            return  $response;
 
         if ($response['compile_status'] == "OK") {
             return response()->json(['message' => 'success', 'status' => Response::$statusTexts['200'], 'code' => Response::HTTP_OK, 'body' => $response, 'output' => $response['run_status']['output']], Response::HTTP_OK);

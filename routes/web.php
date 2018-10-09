@@ -35,8 +35,10 @@ Route::get('/submittedusers','SubmissionController@submitted_users')->name('subm
  //set status Accept or reject
  Route::get('/setstatus','SubmissionController@set_status')->name('setstatus');
 //========================Challenge Controller============================
+Route::group(['middleware' => 'auth'], function(){
  //Selected Challenge Details
  Route::get('/challenge', 'ChallengeController@challenge_details')->name('challenge');
+});
  //Challenges to be solved
  Route::get('/mychallenges', 'ChallengeController@mychallenges')->name('mychallenges');
  //Store new challenge

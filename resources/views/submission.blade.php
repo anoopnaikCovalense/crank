@@ -18,7 +18,7 @@
       <div class="d-flex justify-content-end ">
         @if($challenge->status=='Approved')
         <i class="fas fa-check" style="
-                              color: lightgreen;
+                              color:lightgreen;
                               "></i>
         @elseif($challenge->status=='Rejected')
         <i class="fas fa-close" style="

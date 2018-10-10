@@ -37,28 +37,24 @@ $(document).ready(function () {
       data: { code: code, lang: lang },
       error: function (err) {
         $("#loading").hide();
-        console.log(err.responseJSON['output'])
         $("#error").html("");
         $("#Errorbutton").show(); 
-        $("#error").html(err.responseJSON['output']);
+        $("#error").html("Some Error with API ");
       },
       success: function (result) {
+        $("#Errorbutton").hide();
         console.log(result);
         $("#loading").hide();
-        if (result.body.run_status.stderr!="") {
+        if (result.body.exitcode!=0) {
           $("#Errorbutton").show();
           $("#error").html("");
-          $("#error").html(result.body.run_status.stderr);
+          $("#error").html(result.body.error);
         }
-        if (result.body.run_status.compile_status =="Error code: 1200") {
-          $("#Errorbutton").show();
-          $("#error").html(" 1200 error");  
-        }
-        else if (result['status'] == "OK") {
+        else if (result.status== "OK") {
           console.log(result) 
           $("#output").html(result.output);
           compile_status = result.status;         
-          run_status=result.body.run_status.status_detail;
+          run_status=result.status;
           sourcecode=code;  
           language=lang;   
           output=result.output;     
@@ -84,7 +80,7 @@ $(document).ready(function () {
           },
           success:function(_response)
           {
-              alert("Stored successfully");
+            swal("Submit Successfully !","You clicked the button!", "success");
               
               
 

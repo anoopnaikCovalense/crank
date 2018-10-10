@@ -66,13 +66,15 @@
                       @if ($submission->status === 'Approved')
 
                       <i class="fas fa-check" style="
-                        color: lightgreen;
+                        color:green;
                         "></i>
                       @elseif ($submission->status === 'Rejected')
                       <i class="fas fa-times"  style="
-                        color: lightsalmon;
+                        color: salmon;
                         "></i>@else
-                      <i class="fas fa-exclamation"></i> 
+                      <i class="fas fa-exclamation" style="
+                        color:orange;
+                        "></i> 
                       @endif
                       </small>
                     </div>

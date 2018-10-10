@@ -13,9 +13,10 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
+                /* background-image:url('bg5.jpeg'); */
+                background-color:white;
                 color: #636b6f;
-                font-family: 'Raleway', sans-serif;
+                font-family:"Times New Roman", Times, serif;
                 font-weight: 100;
                 height: 100vh;
                 margin: 0;
@@ -69,10 +70,9 @@
     <body>
        <!--  <div class="flex-center position-ref full-height"> -->
            
-            <div class="content">
+            <div class="content" style="padding-top:70px">
                 <div class="title m-b-md">  
-                <img src="crank.jpg"  height="140" width="250">
-            
+                <img src="crank.jpg"  height="200" width="320">
                 </div>
 
  @if (Route::has('login'))

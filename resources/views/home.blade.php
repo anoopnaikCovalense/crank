@@ -1,10 +1,13 @@
 @extends('layouts.app')
 @section('content')
+<link rel="stylesheet" href="{{ URL::asset('css/main.css') }}"/>
 <div class="container text-center" style="  padding-top:10px;"><div>
+<div></div>
      <div class="row">
-            <div class="col-md-6 text-left">
-            <link rel="stylesheet" href="{{ URL::asset('css/main.css') }}" />
+            <div class="col-md-6 text-left" style="padding-top:15px">   
+                       
             </div>
+           
             <div class="col-md-6 text-right">
                     <br>
                 

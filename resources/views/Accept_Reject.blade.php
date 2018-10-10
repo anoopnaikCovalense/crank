@@ -45,7 +45,7 @@
         </div>
     </div>
      <div class="col-md-6" style="padding:0%">
-        <div class="card" style="height:92vh;width=100%">
+        <div class="card" style="height:92vh;width:100%">
          <div class="card-header bg-indigo  text-white float-left" style="height:10vh">
           <span>Code</span>
          </div>

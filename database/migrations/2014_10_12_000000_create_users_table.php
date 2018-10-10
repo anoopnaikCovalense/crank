@@ -20,7 +20,9 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
-            $table-> boolean('isAdmin');
+            $table->boolean('isAdmin');
+            $table->boolean('isVerified');
+            $table->string('emailToken');
         });
     }
 

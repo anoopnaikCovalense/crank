@@ -47,6 +47,7 @@ $(document).ready(function () {
         $("#loading").hide();
         if (result.body.exitcode!=0) {
           $("#Errorbutton").show();
+          $("#Submit").prop("disabled",true);
           $("#error").html("");
           $("#error").html(result.body.error);
         }

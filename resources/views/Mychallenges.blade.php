@@ -38,7 +38,7 @@
               @endforeach
      </div>
               @else
-              <b>No Challenges!!</b>
+              <b>No Challenges Yet!!</b>
               @endif
 
     </div>

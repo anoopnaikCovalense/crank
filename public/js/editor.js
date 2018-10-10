@@ -87,11 +87,7 @@ $(document).ready(function () {
         if (okay) {
     window.location.href = "http://localhost/crank/public/submissions";
   }
-});
-              
-              
-
-           
+}) 
           }
         }
       );

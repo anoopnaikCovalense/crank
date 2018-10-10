@@ -61,3 +61,26 @@ $(document).ready(function() {
             });
     });
 });
+
+// function successfully_submitted($this) {
+//     swal("Your file has been saved !", "success");
+    
+// }
+
+//         $.ajax({
+//             type: 'GET',
+//             url: '/challenge',
+//             success: function (data) {
+//                 if (data == "true") {
+//                     swal("Poof! Your file has been saved !", {
+//                         icon: "success",
+//                     });
+//                 }
+//             }
+//         });
+
+//         $(document).ready(function() {
+//             $('#Submit').click(() => {
+//                 swal("Your file has been saved !", "success");
+//             });
+//         });

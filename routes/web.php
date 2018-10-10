@@ -22,7 +22,6 @@ Auth::routes();
  //====================Mail Controller===============
  Route::get('/send','MailController@send')->name('send');
 Route::get('/sentoAll','MailController@sendtoAll')->name('sendtoAll');
-
 //========================Submission Controller============================
 //Challenges Submitted
  Route::get('/submissions','SubmissionController@challenges_submitted')->name('submissions');

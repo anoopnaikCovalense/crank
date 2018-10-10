@@ -57,7 +57,7 @@
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('home') }}">
-            <img src="crank.jpg"   height="38vh"width="85vw">
+            <img src="/crank.jpg"   height="38vh"width="85vw">
 
                 </a>
 

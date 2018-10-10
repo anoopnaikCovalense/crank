@@ -30,11 +30,24 @@ class HomeController extends Controller
 
     public function index()
     {
-        $challenges = DB::select('select challenges.tags,challenges.desc,challenges.created_at,challenges.id,count(submissions.id) as counts ,challenges.cname,U.name 
-        from challenges left join submissions
-        on challenge_id=challenges.id left join users U 
-        on U.id = submissions.user_id 
-        where challenges.active=1 group by  challenges.tags,challenges.id,challenges.desc,challenges.cname,U.name,challenges.created_at order by challenges.id DESC ');
+        $challenges = DB::select('SELECT 
+                                        challenges.tags,
+                                        challenges.desc,
+                                        challenges.created_at,
+                                        challenges.id,
+                                        COUNT(submissions.id) AS counts,
+                                        challenges.cname,
+                                        U.name AS createdByName
+                                    FROM
+                                        challenges
+                                            LEFT JOIN
+                                        submissions ON challenge_id = challenges.id
+                                            LEFT JOIN
+                                        users U ON U.id = challenges.user_id
+                                    WHERE
+                                        challenges.active = 1
+                                    GROUP BY challenges.tags , challenges.id , challenges.desc , challenges.cname , U.name , challenges.created_at
+                                    ORDER BY challenges.id DESC;');
         $user=user::find(Auth::user()->id);
         foreach($challenges as $challenge)
          {

@@ -1,6 +1,7 @@
 # Crank
 
-Crank is a coding judgement tool mirroring popular services like Codechef and Hackerearth. This is a self-hosted service which currently depends on 3rd party API for code run and compilation (We use Hackerearth APIs)
+Crank is a coding judgement tool mirroring popular services like Codechef and Hackerearth. This is a self-hosted service which currently depends on 3rd party API for code run and compilation (We use RunMyCodeOnline API).
+There are network and request limitations for RunMyCodeOnline APIs.
 
 
 ## Dev Setup

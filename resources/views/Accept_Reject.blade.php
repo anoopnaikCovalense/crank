@@ -37,7 +37,7 @@ editor.setReadOnly(true);
             <b>Input format:</b><br>
               {{$challenge->ipformat}}
             <br> <br>
-            <b>Contraints:</b><br>
+            <b>Constraints:</b><br>
             {{$challenge->constraints}}
             <br> <br>
             <b>Output Format:</b><br>
@@ -52,7 +52,7 @@ editor.setReadOnly(true);
         </div>
     </div>
      <div class="col-md-6" style="padding:0%">
-        <div class="card" style="height:92vh;width=100%">
+        <div class="card" style="height:92vh;width:100%">
          <div class="card-header bg-indigo  text-white float-left" style="height:10vh">
           <span>Code</span>
          </div>

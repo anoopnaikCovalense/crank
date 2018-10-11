@@ -25,7 +25,7 @@ class CreateSubmissionsTable extends Migration
             $table->string('language');
             $table->longText('output');
             $table->string('status')->default('pending');
-            $table->float('rating',2,1)->default(0.0);
+            $table->float('rating',3,1)->default(0.0);
             $table->timestamps();
         });
     }

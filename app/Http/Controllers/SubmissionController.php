@@ -74,7 +74,7 @@ class SubmissionController extends Controller
         $challenge=Challenge::find($_REQUEST['cid']);
         $submissions=Submission::where('challenge_id','=',$_REQUEST['cid'])
         ->join('users','users.id','=','submissions.user_id')
-        ->get(['users.name','submissions.id','submissions.status']);
+        ->get(['users.name','users.email','submissions.id','submissions.status','submissions.rating']);
         return view('SubmittedUsers',['challenge'=>$challenge,'submission'=>$submissions]);
     }
 
@@ -97,7 +97,8 @@ class SubmissionController extends Controller
     {
         $submission=Submission::find($_REQUEST['submissionid']);
         $submission->status=$_REQUEST['status'];
-        $submission->rating=$_REQUEST['rating'];
+        if (isset($_REQUEST['rating']))
+            $submission->rating=$_REQUEST['rating'];
         $submission->save();
         return redirect()->route('submittedusers',['submission'=>$submission,'cid'=>$submission->challenge_id]);
     }

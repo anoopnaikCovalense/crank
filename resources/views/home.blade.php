@@ -3,7 +3,9 @@
 <script type="text/javascript" src="{{ URL::asset('js/searchbar.js') }}"></script>
 <link rel="stylesheet" href="{{ URL::asset('css/main.css') }}"/>
 <div class="container text-center" style="  padding-top:10px;"><div>
-<div></div>
+<div>
+<a href="https://placeholder.com"><img src="https://via.placeholder.com/390x105"></a>
+</div>
      <div class="row">
             <div class="col-md-6 text-left" style="padding-top:15px">
             </div>

@@ -97,6 +97,7 @@ class SubmissionController extends Controller
     {
         $submission=Submission::find($_REQUEST['submissionid']);
         $submission->status=$_REQUEST['status'];
+        $submission->rating=$_REQUEST['rating'];
         $submission->save();
         return redirect()->route('submittedusers',['submission'=>$submission,'cid'=>$submission->challenge_id]);
     }

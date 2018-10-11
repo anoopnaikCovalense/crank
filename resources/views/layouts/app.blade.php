@@ -21,7 +21,9 @@
 
 
 
-
+<script type="text/javascript">
+      var base_url = {!! json_encode(url('/')) !!}
+</script>
 <!-- <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -57,7 +59,7 @@
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('home') }}">
-            <img src="/crank.jpg"   height="38vh"width="85vw">
+            <img src="crank.jpg"   height="38vh"width="85vw">
 
                 </a>
 

@@ -9,6 +9,13 @@
         overflow: hidden;
     }
 </style>
+<script>
+$(document).ready(function () {
+var editor = ace.edit("editor");
+editor.setTheme("ace/theme/monokai");
+editor.setReadOnly(true);
+});
+</script>
 <div>
   <div>    
     <div class="row">
@@ -30,7 +37,7 @@
             <b>Input format:</b><br>
               {{$challenge->ipformat}}
             <br> <br>
-            <b>Contraints:</b><br>
+            <b>Constraints:</b><br>
             {{$challenge->constraints}}
             <br> <br>
             <b>Output Format:</b><br>
@@ -45,15 +52,18 @@
         </div>
     </div>
      <div class="col-md-6" style="padding:0%">
-        <div class="card" style="height:92vh;width=100%">
+        <div class="card" style="height:92vh;width:100%">
          <div class="card-header bg-indigo  text-white float-left" style="height:10vh">
           <span>Code</span>
          </div>
-          <div class="card-body">
-            <h3>{{$submission->code}}</h3>
-          </div>
+         <div style="padding: 0rem;" class="card-body">
+            <div style="position:relative;height:84vh;" id="editor">{{ $submission->code }}</div>
+                <textarea  id="content" name="content"disabled="disabled" hidden></textarea>
+            </div>
+              
+            </div>
         </div>
-    </div>
+    
     <div class="col-md-3">
         <div class="card"  style="height:92vh">
             <div class="card-header bg-indigo text-white " style="height:10vh">
@@ -67,7 +77,8 @@
             <div class="card-footer bg-indigo text-right">
                 <a href="{{route('setstatus',['submissionid'=>$submission->id,'status'=>'Approved'])}}"><button   class="btn btn-success"><i class="fa fa-thumbs-up"> Approve</i></button></a>
                 <a  href="{{route('setstatus',['submissionid'=>$submission->id,'status'=>'Rejected'])}}"><button   class="btn btn-danger"><i class="fa fa-thumbs-down"> Reject</i></button></a>
-            </div>     
+            </div> 
+            </div>    
         </div>      
       </div>
     </div>

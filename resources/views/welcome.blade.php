@@ -45,7 +45,6 @@
 
             .content {
                 text-align: center;
-                top 
             }
 
             .title {

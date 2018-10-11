@@ -50,17 +50,20 @@ $(document).ready(function () {
         $("#Errorbutton").hide();
         console.log(result);
         $("#loading").hide();
-        if (result.body.exitcode!=0 && result.body.error!="") {
-          $("#Errorbutton").show();
-          $("#error").html("");
-          $("#error").html(result.body.error);
-        }
-        else if(result.body.exitcode!=0 && result.body.error=="")
+        if (result.body.exitcode!=0)
+        {
+         if(result.body.error=="")
          {
           $("#Errorbutton").show();
           $("#error").html("");
           $("#error").html(result.body.stdout);
+         }
+         else {
+          $("#Errorbutton").show();
+          $("#error").html("");
+          $("#error").html(result.body.error);
         }
+       } 
         else if (result.status== "OK") {
           console.log(result) 
           $("#output").html(result.output);

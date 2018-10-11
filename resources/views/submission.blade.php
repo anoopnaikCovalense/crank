@@ -5,7 +5,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div class="container">       
        <br>
-        @if($challenges=="")    
+       @if(isset($challenges))     
         @foreach($challenges as $challenge)
       <div class="list-group">
         <a href="{{route('submission_details',['cid'=>$challenge->challenge_id,'sid'=>$challenge->id])}}" class="list-group-item list-group-item-action flex-column align-items-start  user-access">

@@ -52,6 +52,7 @@ $(document).ready(function () {
         }
         else if (result.status== "OK") {
           console.log(result) 
+          
           $("#output").html(result.output);
           compile_status = result.status;         
           run_status=result.status;
@@ -61,6 +62,7 @@ $(document).ready(function () {
           cid=$("#challengeid").val();
           uid=$("#userid").val();
           $("#Submit").prop("disabled", false);
+          
         
         }
       }

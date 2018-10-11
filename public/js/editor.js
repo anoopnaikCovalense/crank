@@ -85,7 +85,7 @@ $(document).ready(function () {
         text: "You clicked the button!",
           type: "success"}).then(okay => {
         if (okay) {
-    window.location.href = "http://localhost/crank/public/submissions";
+    window.location.href = " base_url + "/submissions;
   }
 }) 
           }

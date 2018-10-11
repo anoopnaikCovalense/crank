@@ -2,3 +2,4 @@ vendor/
 .idea/
 .env
 nbproject/
+queue-worker.log

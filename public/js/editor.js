@@ -60,6 +60,7 @@ $(document).ready(function () {
          }
          else {
           $("#Errorbutton").show();
+          $("#Submit").prop("disabled",true);
           $("#error").html("");
           $("#error").html(result.body.error);
         }

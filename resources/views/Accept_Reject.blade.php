@@ -83,4 +83,5 @@ editor.setReadOnly(true);
       </div>
     </div>
 </div>
+
 @endsection

@@ -38,26 +38,3 @@ function delete_record($this) {
             }
         });
 }
-
-$(document).ready(function() {
-    $('#deleteChallenge').click(() => {
-        swal({
-            title: "Are you sure?",
-            text: "Once deleted, you will not be able to recover this file!",
-            icon: "warning",
-            buttons: true,
-            dangerMode: true,
-        })
-            .then((willDelete) => {
-                if (willDelete) {
-                    window.location = "http://localhost/crank/public/del?cid=" + this.id;
-                    swal("Poof! Your file has been deleted !", {
-                        icon: "success",
-                    });
-
-                } else {
-                    swal("Your  file is safe!");
-                }
-            });
-    });
-});

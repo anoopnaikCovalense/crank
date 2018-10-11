@@ -58,11 +58,7 @@
                      <div class="d-flex w-100 justify-content-between">
                      <h5 class="mb-1"><b>Submitted By :</b> {{$submission->name}}</h5>
                      
-                     <small style="
-                                 font-size: 140%;
-                                  / margin-top: 34%; /
-                                   vertical-align: middle;
-                                     " >
+                     <small style="font-size: 140%;vertical-align: middle;">
                       @if ($submission->status === 'Approved')
 
                       <i class="fas fa-check" style="

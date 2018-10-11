@@ -26,7 +26,12 @@ $(document).ready(function () {
     var lang = $("#mode").val();
     if (code.length == 0) {
       $("#loading").hide();
-      alert("Type the code..!!");
+      swal({
+        type: 'error',
+        title: 'Oops...!!!!!!',
+        text: 'Please Enter  the Code!!!!',
+        footer: '<a href>Why do I have this issue?</a>'
+      })
      
       return;
     }
@@ -45,14 +50,24 @@ $(document).ready(function () {
         $("#Errorbutton").hide();
         console.log(result);
         $("#loading").hide();
-        if (result.body.exitcode!=0) {
+        if (result.body.exitcode!=0)
+        {
+         if(result.body.error=="")
+         {
+          $("#Errorbutton").show();
+          $("#error").html("");
+          $("#error").html(result.body.stdout);
+         }
+         else {
           $("#Errorbutton").show();
           $("#Submit").prop("disabled",true);
           $("#error").html("");
           $("#error").html(result.body.error);
         }
+       } 
         else if (result.status== "OK") {
           console.log(result) 
+          
           $("#output").html(result.output);
           compile_status = result.status;         
           run_status=result.status;
@@ -81,11 +96,14 @@ $(document).ready(function () {
           },
           success:function(_response)
           {
-            swal("Submit Successfully !","You clicked the button!", "success");
-              
-              
-
            
+            swal({ title: "Submit Successfully !",
+        text: "You clicked the button!",
+          type: "success"}).then(okay => {
+        if (okay) {
+    window.location.href = base_url + "/submissions";
+  }
+}) 
           }
         }
       );

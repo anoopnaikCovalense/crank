@@ -62,7 +62,7 @@ $(document).ready(function () {
           cid=$("#challengeid").val();
           uid=$("#userid").val();
           $("#Submit").prop("disabled", false);
-        
+          closeNav();
         }
       }
     });

@@ -76,7 +76,7 @@
 </script>
 <body>
     <div id="mySidenav" class="sidenav" style="height:auto">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> 
         <br>
         <br>
         <p>Errors:</p>

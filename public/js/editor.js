@@ -95,11 +95,14 @@ $(document).ready(function () {
           },
           success:function(_response)
           {
-            swal("Submit Successfully !","You clicked the button!", "success");
-              
-              
-
            
+            swal({ title: "Submit Successfully !",
+        text: "You clicked the button!",
+          type: "success"}).then(okay => {
+        if (okay) {
+    window.location.href = " base_url + "/submissions;
+  }
+}) 
           }
         }
       );

@@ -100,7 +100,7 @@ $(document).ready(function () {
         text: "You clicked the button!",
           type: "success"}).then(okay => {
         if (okay) {
-    window.location.href = " base_url + "/submissions;
+    window.location.href = base_url + "/submissions";
   }
 }) 
           }

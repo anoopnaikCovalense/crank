@@ -14,7 +14,7 @@
       <h5 class="mb-1"><span style="color:black"><h3>{{$challenge->cname}}</h3><span></h5>
         <small>{{$challenge->parsedTime}}</small>
     </div>
-  <p class="mb-1 text-center"><span style="color:blue">{{$challenge->desc}}Lorem ipsum dolor sit amet, consectetur aia deserunt mollit anim id est laborum.</span></p>
+  <p class="mb-1 text-center"><span style="color:blue">{{$challenge->desc}}</span></p>
   <small>Created by : {{$challenge->name}}</small>
     <div class="d-flex justify-content-end ">
       @if($challenge->status=='Approved')

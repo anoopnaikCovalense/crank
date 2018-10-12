@@ -194,4 +194,8 @@ margin-bottom: 1%;
     .rating-numeric {
         color: green;
         font-weight: bold;
+        border: 1px solid;
+        border-radius: 4px;
+        padding: 0 7px;
+        line-height: 31px;
     }

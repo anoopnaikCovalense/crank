@@ -10,6 +10,7 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use App\Mail\emailVerification;
 use Mail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Lang;
 
 class RegisterController extends Controller
 {
@@ -98,10 +99,17 @@ class RegisterController extends Controller
     public function verify($token)
     {
         $user = User::where('emailToken', $token)->first();
-        $user->isVerified = 1;
+        if (!empty($user))
+        {
+            $user->isVerified = 1;
 
-        if($user->save()){
-            return view('emailConfirm', ['user' => $user]);
+            if($user->save()){
+                return view('emailConfirm', ['user' => $user]);
+            }
+        }
+        else
+        {
+            return redirect()->route('home');
         }
     }
 }

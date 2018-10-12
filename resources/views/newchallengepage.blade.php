@@ -20,7 +20,7 @@
           <div class="row ">
             <label class=" col-md-2"  for="description"> Description</label>
                 <div class="col-md-10">
-                    <textarea rows="2" cols="100" id="preview" class="form-control form-control-lg description span16" placeholder="Write a short summary about the challenge" name="desc">{{ old('desc') }}</textarea>
+                    <textarea style="font-size:16px" rows="4" cols="100" id="preview" class="form-control form-control-lg description span16" placeholder="Write a short summary about the challenge" name="desc">{{ old('desc') }}</textarea>
                         @if ($errors->has('desc'))
                         <span class="text-danger">{{ $errors->first('desc') }}</span>
                         @endif

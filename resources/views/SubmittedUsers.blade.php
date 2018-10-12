@@ -58,7 +58,15 @@
                      <h5 class="mb-1"><b>Submitted By:</b> {{ $submission->name }} <small>({{$submission->email}})</small></h5>
                      
                      @if ($submission->status === 'Approved' && isset($submission->rating))
-                     <span class="rating-numeric">{{ $submission->rating }} / 10</span>
+                     <span class="rating-numeric 
+                           @if ($submission->rating >= 7)
+                            text-success
+                           @elseif ($submission->rating >= 4)
+                            text-warning
+                           @else
+                            text-danger
+                           @endif
+                           ">{{ $submission->rating }} / 10</span>
                      @endif
                      
                      <small style="font-size: 140%;vertical-align: middle;">

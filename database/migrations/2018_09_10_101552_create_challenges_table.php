@@ -27,6 +27,7 @@ class CreateChallengesTable extends Migration
             $table->longText('testcaseopformat');
             $table->longText('tags');
             $table->integer('active')->default(1);
+            $table->float('rating',3,1)->default(0.0);
             $table->timestamps();
         });
     }

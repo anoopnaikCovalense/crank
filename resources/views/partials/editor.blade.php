@@ -2,7 +2,6 @@
 @section('content')
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> -->
 <link rel="stylesheet" href="{{ URL::asset('css/main.css') }}" />
 <style type="text/css" media="screen">
     body {
@@ -139,9 +138,9 @@
             </div>
     <div class="card-footer bg-indigo  text-white text-right" style="height:10vh" >
     <!-- <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776</span> -->
-          <button  type="button" class="btn btn-danger buttons"onclick="openNav()" id="Errorbutton">Error</button>
-          <button   type="button" style="line-height:0.5" id="Run" class="btn btn-success buttons"><i class="fa fa-play-circle"> Run</i></button>
-          <button  type="button"  id="Submit"class="btn btn-success buttons" disabled="disabled"><i class="fa fa-check"> Submit</i></button>
+          <button type="button" class="btn btn-danger buttons"onclick="openNav()" id="Errorbutton">Error</button>
+          <button type="button" style="line-height:0.5" id="Run" class="btn btn-success buttons"><i class="fa fa-play-circle"></i> Run</button>
+          <button type="button"  id="Submit"class="btn btn-success buttons" disabled="disabled"><i class="fa fa-check"></i> Submit</button>
           
     </div> 
  </form>

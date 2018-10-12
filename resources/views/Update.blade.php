@@ -8,7 +8,7 @@
     @csrf
 <div class="container">
     <br>
-     <p class="aside block-margin margin-large">Update your challenge</p>
+     <p class="aside block-margin margin-large">Update your challenge details</p>
      
           <div class="row">
     <label class="col-md-2" for="challengename">Challenge Name </label>  

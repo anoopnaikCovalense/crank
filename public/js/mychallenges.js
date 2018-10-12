@@ -9,7 +9,7 @@ function delete_record($this) {
     var request_data = $this.id;
     swal({
         title: "Are you sure?",
-        text: "Once deleted, you will not be able to recover this file!",
+        text: "Once deleted, you can not recover your challenge!",
         icon: "warning",
         buttons: true,
         dangerMode: true,
@@ -21,7 +21,7 @@ function delete_record($this) {
                     url: "delete?cid=" + request_data,
                     success: function (data) {
                         if (data == "true") {
-                            swal("Poof! Your file has been deleted !", {
+                            swal("Poof! Your Challenge has been deleted !", {
                                 icon: "success",
                             });
                             location.reload();
@@ -34,7 +34,7 @@ function delete_record($this) {
 
                 })
             } else {
-                swal("Your  file is safe!");
+                swal("Your  Challenge is safe!");
             }
         });
 }

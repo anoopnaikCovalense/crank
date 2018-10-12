@@ -97,8 +97,8 @@ $(document).ready(function () {
           success:function(_response)
           {
            
-            swal({ title: "Submit Successfully !",
-        text: "You clicked the button!",
+            swal({ title: "Thank you!",
+        text: "Your solution has been submitted successfully.",
           type: "success"}).then(okay => {
         if (okay) {
     window.location.href = base_url + "/submissions";

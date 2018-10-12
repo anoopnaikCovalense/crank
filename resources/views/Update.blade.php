@@ -22,7 +22,7 @@
           <div class="row ">
     <label class="col-md-2" for="description">Description</label>
     <div class="col-md-10">
-    <textarea rows="2" cols="100" id="preview"  type="text"  class="form-control form-control-lg" class="description span16" value="{{$challenge->desc}}" name="description">{{$challenge->desc}}</textarea>
+        <textarea style="font-size:16px" rows="4" cols="100" id="preview"  type="text"  class="form-control form-control-lg" class="description span16" value="{{$challenge->desc}}" name="description">{{$challenge->desc}}</textarea>
      <!-- <small class="description pull-left sub-help"> Charaters left :140</small> -->
     </div>
   </div>

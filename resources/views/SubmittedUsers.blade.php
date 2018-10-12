@@ -57,19 +57,22 @@
                      <a href="{{route('accept_reject',['submissionid'=>$submission->id,'challengeid'=>$challenge->id])}}" class="list-group-item list-group-item-action flex-column align-items-start custom-list">
                      <div class="d-flex w-100 justify-content-between">
                      <h5 class="mb-1"><b>Submitted By :</b> {{$submission->name}}</h5>
-                     
+                     @if ($submission->status === 'Approved')
+                     <div>
+                          <b>{{$submission->rating}} <span style="color:orange"><i class="fa fa-star"></i></span></b>
+                     </div>
+                     @endif
                      <small style="font-size: 140%;vertical-align: middle;">
                       @if ($submission->status === 'Approved')
-
                       <i class="fas fa-check" style="
                         color:green;
                         "></i>
                       @elseif ($submission->status === 'Rejected')
                       <i class="fas fa-times"  style="
-                        color: salmon;
+                        color:red;
                         "></i>@else
                       <i class="fas fa-exclamation" style="
-                        color:orange;
+                        color:darksalmon;
                         "></i> 
                       @endif
                       </small>

@@ -62,14 +62,14 @@
   <div class="row " style="padding-bottom: 30px;">
     <label class="col-md-2"  for="challengename"> Test Case Input Format </label>
     <div class="col-md-10">
-    <input class="form-control form-control-lg" id="testcaseipformat" type="text" value="{{$challenge->testcaseipformat}}" name="testcaseipformat" class="span12">
+    <input id="testcaseipformat" type="text" value="{{$challenge->testcaseipformat}}" name="testcaseipformat" class="span12">
     </div>
   </div>
 
 <div class="row " style="padding-bottom: 30px;">
     <label class="col-md-2"  for="challengename"> Test Case Output Format </label>
     <div class="col-md-10">
-    <input class="form-control form-control-lg" id="testcaseopformat" type="text" name="testcaseopformat"  value="{{$challenge->testcaseopformat}}"class="span12">
+    <input id="testcaseopformat" type="text" name="testcaseopformat"  value="{{$challenge->testcaseopformat}}"class="span12">
     </div>
   </div>      
   <div class="row ">

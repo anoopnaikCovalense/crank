@@ -54,22 +54,10 @@
                   @foreach($submission as $submission)
 
                      <a href="{{route('accept_reject',['submissionid'=>$submission->id,'challengeid'=>$challenge->id])}}" class="list-group-item list-group-item-action flex-column align-items-start custom-list">
-                     <div class="d-flex w-100 justify-content-between">
-                     <h5 class="mb-1"><b>Submitted By:</b> {{ $submission->name }} <small>({{$submission->email}})</small></h5>
+                         <div class="w-100" style="display:block;">
+                     <h5 class="mb-1 float-left"><b>Submitted By:</b> {{ $submission->name }} <small>({{$submission->email}})</small></h5>
                      
-                     @if ($submission->status === 'Approved' && isset($submission->rating) && $submission->rating > 0)
-                     <span class="rating-numeric 
-                           @if ($submission->rating >= 7)
-                            text-success
-                           @elseif ($submission->rating >= 4)
-                            text-warning
-                           @else
-                            text-danger
-                           @endif
-                           ">{{ $submission->rating }} / 10</span>
-                     @endif
-                     
-                     <small style="font-size: 140%;vertical-align: middle;">
+                     <small class="float-right" style="font-size: 140%;vertical-align: middle; display:inline-block;">
                       @if ($submission->status === 'Approved')
                       <i class="fas fa-check" style="color:green;"></i>
                       @elseif ($submission->status === 'Rejected')
@@ -78,6 +66,20 @@
                       <i class="fas fa-exclamation" style="color:orange;"></i> 
                       @endif
                       </small>
+                     
+                     @if ($submission->status === 'Approved' && isset($submission->rating) && $submission->rating > 0)
+                     <span class="rating-numeric mr-3 float-right
+                           @if ($submission->rating >= 7)
+                            text-success
+                           @elseif ($submission->rating >= 4)
+                            text-warning
+                           @else
+                            text-danger
+                           @endif
+                           " style="display:inline-block;">{{ $submission->rating }} / 10</span>
+                     @endif
+                     
+                     
                     </div>
 
                        </a>

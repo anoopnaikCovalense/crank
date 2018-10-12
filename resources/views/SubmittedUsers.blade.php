@@ -52,12 +52,14 @@
             <div class="list-group">
 
                   @foreach($submission as $submission)
-
+                
                      <a href="{{route('accept_reject',['submissionid'=>$submission->id,'challengeid'=>$challenge->id])}}" class="list-group-item list-group-item-action flex-column align-items-start custom-list">
                          <div class="w-100" style="display:block;">
+                           
                      <h5 class="mb-1 float-left"><b>Submitted By:</b> {{ $submission->name }} <small>({{$submission->email}})</small></h5>
                      
                      <small class="float-right" style="font-size: 140%;vertical-align: middle; display:inline-block;">
+                     
                       @if ($submission->status === 'Approved')
                       <i class="fas fa-check" style="color:green;"></i>
                       @elseif ($submission->status === 'Rejected')
@@ -76,9 +78,10 @@
                            @else
                             text-danger
                            @endif
+                        
                            " style="display:inline-block;">{{ $submission->rating }} / 10</span>
                      @endif
-                     
+                     <small class="float-right mr-3" style="display:block;position:relative;top:5px" >{{$submission->parsedTime}}</small>
                      
                     </div>
 

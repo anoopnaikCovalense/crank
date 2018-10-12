@@ -55,7 +55,7 @@
 
                      <a href="{{route('accept_reject',['submissionid'=>$submission->id,'challengeid'=>$challenge->id])}}" class="list-group-item list-group-item-action flex-column align-items-start custom-list">
                      <div class="d-flex w-100 justify-content-between">
-                     <h5 class="mb-1"><b>Submitted By:</b> {{ $submission->name }} <small>({{$submission->email}})</small> <small>{{$submission->parsedTime}}</small></h5>
+                     <h5 class="mb-1"><b>Submitted By:</b> {{ $submission->name }} <small>({{$submission->email}})</small></h5>
                      
                      @if ($submission->status === 'Approved' && isset($submission->rating) && $submission->rating > 0)
                      <span class="rating-numeric 

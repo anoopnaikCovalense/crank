@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="{{ URL::asset('css/main.css') }}"/>
 <div class="container text-center" style="  padding-top:10px;"><div>
 <div>
-<a href="https://placeholder.com"><img src="https://via.placeholder.com/390x105"></a>
+<a href="http://www.covalense.com"><img src="https://dummyimage.com/728x90/9e9e9e/ffffff.png&text=728x90+Advertisement+Unit+Goes+Here!"></a>
 </div>
      <div class="row">
             <div class="col-md-6 text-left" style="padding-top:15px">

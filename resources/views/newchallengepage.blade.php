@@ -65,7 +65,7 @@
     <div class="row">
         <label class=" col-md-2"  for="TestCaseInputFormat:"> Test Case Input Format </label>
             <div class="col-md-10">
-                <input value="{{old('testcaseipformat')}}" id="testcaseipformat" type="text" name="testcaseipformat" class="span12">
+                <input class="form-control form-control-lg" value="{{old('testcaseipformat')}}" id="testcaseipformat" type="text" name="testcaseipformat" class="span12">
                     @if ($errors->has('testcaseipformat'))
                         <span class="text-danger">{{ $errors->first('testcaseipformat')}}</span>
                     @endif
@@ -74,7 +74,7 @@
     <div class="row">
         <label class=" col-md-2"  for="TestCaseOutputFormat"> Test Case Output Format </label>
             <div class="col-md-10">
-                <input value="{{ old('testcaseopformat') }}"  id="testcaseopformat" type="text" name="testcaseopformat" class="span12">
+                <input class="form-control form-control-lg" value="{{ old('testcaseopformat') }}"  id="testcaseopformat" type="text" name="testcaseopformat" class="span12">
                     @if ($errors->has('testcaseopformat'))
                         <span class="text-danger">{{ $errors->first('testcaseopformat')}}</span>
                     @endif

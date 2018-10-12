@@ -1,31 +1,27 @@
 @extends('layouts.app')
 @section('content')
 <link rel="stylesheet" href="{{ URL::asset('css/main.css') }}" />
-
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <form method="POST" action="{{route('edit',['cid'=>$challenge->id])}}">
     @csrf
 <div class="container">
-   
-    <h2> Update </h2>
-     <!-- <p class="aside block-margin margin-large"> <i>Get started by providing the initial details needed to create a challenge.
-         </i></p> -->
-         
-         
-          <div class="row " style="padding-bottom: 30px;">
-    <label class=" col-md-3"  for="challengename"><b>Challenge Name :</b> </label>  
-    <div class="col-md-9">
-    <input class="form-control form-control-lg" id="inputsm" type="text" name="challengename"  value="{{$challenge->cname}}" class="span12" required>
+    <br>
+     <p class="aside block-margin margin-large">Update your challenge</p>
+     
+          <div class="row">
+    <label class="col-md-2" for="challengename">Challenge Name </label>  
+    <div class="col-md-10">
+    <input id="cname" type="text" name="challengename"  value="{{$challenge->cname}}" class="span12" required>
     </div>
   </div>
 
          
          
           <div class="row ">
-    <label class=" col-md-3"  for="description"><b>Description :</b></label>
-    <div class="col-md-9">
+    <label class="col-md-2" for="description">Description</label>
+    <div class="col-md-10">
     <textarea rows="2" cols="100" id="preview"  type="text"  class="form-control form-control-lg" class="description span16" value="{{$challenge->desc}}" name="description">{{$challenge->desc}}</textarea>
      <!-- <small class="description pull-left sub-help"> Charaters left :140</small> -->
     </div>
@@ -33,16 +29,16 @@
          
          
           <div class="row " style="padding-bottom: 30px;">
-              <label for="name" class=" col-md-3" > <b>Problem Statement : </b> </label>
-    <div class="col-md-9">
+              <label for="name" class="col-md-2" >Problem Statement</label>
+    <div class="col-md-10">
     <textarea name="problemstatement" class="ckeditor block  profile-input" value="{{$challenge->statement}}">  </textarea>
     </div>
   </div>
          
          
           <div class="row " style="padding-bottom: 30px;">
-              <label class=" col-md-3"  for="email"> <b> Input Format :</b></label>
-    <div class="col-md-9">
+              <label class="col-md-2"  for="email">  Input Format</label>
+    <div class="col-md-10">
     <textarea name="inputformat" class="ckeditor block  profile-input" value="{{$challenge->ipformat}}">  </textarea>
     </div>
   </div>
@@ -50,56 +46,80 @@
          
          
          <div class="row " style="padding-bottom: 30px;">
-    <label class=" col-md-3"  for="email"><b> Constraints : </b> </label>
-    <div class="col-md-9">
+    <label class="col-md-2"  for="email">Constraints</label>
+    <div class="col-md-10">
     <textarea name="constraints" class="ckeditor block  profile-input" value="{{$challenge->constraints}}">  </textarea>
     </div>
   </div>
     
           <div class="row ">
-    <label class=" col-md-3"  for="email"><b> Output Format : </b> </label>
-    <div class="col-md-9">
+    <label class="col-md-2"  for="email">Output Format</label>
+    <div class="col-md-10">
     <textarea name="outputformat" class="ckeditor block  profile-input" value="{{$challenge->opformat}}">  </textarea>
     </div>
   </div>
          
   <div class="row " style="padding-bottom: 30px;">
-    <label class=" col-md-3"  for="challengename"><b> TestCase InputFormat :</b> </label>
-    <div class="col-md-9">
+    <label class="col-md-2"  for="challengename"> Test Case Input Format </label>
+    <div class="col-md-10">
     <input class="form-control form-control-lg" id="testcaseipformat" type="text" value="{{$challenge->testcaseipformat}}" name="testcaseipformat" class="span12">
     </div>
   </div>
 
 <div class="row " style="padding-bottom: 30px;">
-    <label class=" col-md-3"  for="challengename"><b> TestCase OutputFormat :</b> </label>
-    <div class="col-md-9">
+    <label class="col-md-2"  for="challengename"> Test Case Output Format </label>
+    <div class="col-md-10">
     <input class="form-control form-control-lg" id="testcaseopformat" type="text" name="testcaseopformat"  value="{{$challenge->testcaseopformat}}"class="span12">
     </div>
   </div>      
   <div class="row ">
-    <label class=" col-md-3"  for="email"><b> Tags : </b> </label>
-    <div class="col-md-9">
-        <input name="tags" class="form-control form-control-lg" id="inputsm" type="text" class="span12" value=" {{$challenge->tags}}">
+    <label class="col-md-2"  for="email">Tags</label>
+    <div class="col-md-10">
+        <input name="tags" id="tags" type="text" class="span12" value="{{$challenge->tags}}">
     </div>
-  </div>
-          <div align="right" style="padding-bottom:20px">
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-              <hr style="background-color: black;">
-              <button type="submit"  class="btn btn-success"><i class="fa fa-check">Save</i></button>
-          </div>
-          
-            
+  </div>         
 </div>
+    <button type="submit" class="btn btn-success btn-lg btn-block"><i class="fa fa-check"></i>&nbsp;Update</button>
         </form>
          
     </body>
     <style>
-            .row{
+            body {
+                background-color: #f3f7f7;
+            }
+            form > div.container {
+                margin-top: 30px;
+                background: #fff;
+                box-shadow: 0 6px 16px 0 rgba(115,143,147,.4);
+            }
+            .row {
                padding-bottom: 30px;
             }
-            .row{
-               padding-bottom: 30px;
+            .row label {
+                position: relative;
+                top: 5px;
+                text-align: right;
+                right: -15px;
             }
+            form > div.container > p {
+                text-align: center;
+                font-size: 25px;
+                font-weight: 300;
+                padding: 20px 0;
+            }
+            button.btn {
+                width: 87%;
+margin: 20px auto 100px auto;
+border:0;
+border-radius: 0;
+outline: none;
+            }
+            button.btn:active {
+                outline:none;
+            }
+button.btn::-moz-focus-inner {
+  border: 0;outline:none;
+}
         </style>
 <script src="https://cdn.ckeditor.com/4.10.0/full-all/ckeditor.js"></script>
 

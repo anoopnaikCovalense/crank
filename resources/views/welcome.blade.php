@@ -5,16 +5,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/ico" href="crank.ico"/>
-
         <title>cRANK</title>
-
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
-        <!-- Styles -->
+     
         <style>
-            html, body {
-                /* background-image:url('bg5.jpeg'); */
+            html, body {                
                 background-color:white;
                 color: #636b6f;
                 font-family:"Times New Roman", Times, serif;
@@ -38,9 +35,7 @@
             }
 
             .top-center {
-                /*position: absolute;
-                right: 10px;
-                top: 18px;*/
+               
                  text-align: center;
             }
 
@@ -68,7 +63,7 @@
         </style>
     </head>
     <body>
-       <!--  <div class="flex-center position-ref full-height"> -->
+      
            
             <div class="content" style="padding-top:70px">
                 <div class="title m-b-md">  

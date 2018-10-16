@@ -11,9 +11,9 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
-        <!-- Styles -->
+     
         <style>
-            html, body {
+            html, body {                
                 background-color:white;
                 color: #636b6f;
                 font-family:"Times New Roman", Times, serif;

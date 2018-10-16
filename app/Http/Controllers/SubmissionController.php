@@ -74,7 +74,11 @@ class SubmissionController extends Controller
         $challenge=Challenge::find($_REQUEST['cid']);
         $submissions=Submission::where('challenge_id','=',$_REQUEST['cid'])
         ->join('users','users.id','=','submissions.user_id')
+<<<<<<< HEAD
+        ->get(['users.name','submissions.id','submissions.status','submissions.rating']);
+=======
         ->get(['users.name','users.email','submissions.id','submissions.status','submissions.rating']);
+>>>>>>> 5ab4f1f2c7db09632398995709e5240ae3c24db2
         return view('SubmittedUsers',['challenge'=>$challenge,'submission'=>$submissions]);
     }
 

@@ -1,13 +1,14 @@
 @extends('layouts.app')
 @section('content')
-<script type="text/javascript" src="{{ URL::asset('js/searchbar.js') }}"></script>
 <link rel="stylesheet" href="{{ URL::asset('css/main.css') }}"/>
+
 <div class="container text-center" style="  padding-top:10px;"><div>
 <div>
 <a href="http://www.covalense.com"><img src="https://dummyimage.com/728x90/9e9e9e/ffffff.png&text=728x90+Advertisement+Unit+Goes+Here!"></a>
 </div>
      <div class="row">
-            <div class="col-md-6 text-left" style="padding-top:15px">
+            <div class="col-md-6 text-left" style="padding-top:25px">
+                
             </div>
            
             <div class="col-md-6 text-right">

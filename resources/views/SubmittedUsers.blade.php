@@ -35,28 +35,20 @@
       <br>
         <br>
       </b>
-   
-            </div>
- 
+        </div>
         </div>
       </div>
-     
       <div class="col-md-8" style="height:91.7vh;">
-       
         <div class="card"  style="height:91.7vh">
             <div class="card-header bg-indigo  text-white float-left">
               Submissions
             </div>
-            
             <div class="card-body" style="overflow-y:auto">
             <div class="list-group">
-
                   @foreach($submission as $submission)
-
                      <a href="{{route('accept_reject',['submissionid'=>$submission->id,'challengeid'=>$challenge->id])}}" class="list-group-item list-group-item-action flex-column align-items-start custom-list">
                          <div class="w-100" style="display:block;">
                      <h5 class="mb-1 float-left"><b>Submitted By:</b> {{ $submission->name }} <small>({{$submission->email}})</small></h5>
-                     
                      <small class="float-right" style="font-size: 140%;vertical-align: middle; display:inline-block;">
                       @if ($submission->status === 'Approved')
                       <i class="fas fa-check" style="color:green;"></i>
@@ -66,7 +58,6 @@
                       <i class="fas fa-exclamation" style="color:orange;"></i> 
                       @endif
                       </small>
-                     
                      @if ($submission->status === 'Approved' && isset($submission->rating) && $submission->rating > 0)
                      <span class="rating-numeric mr-3 float-right
                            @if ($submission->rating >= 7)
@@ -77,26 +68,16 @@
                             text-danger
                            @endif
                            " style="display:inline-block;">{{ $submission->rating }} / 10</span>
-                     @endif
-                     
-                     
+                     @endif                    
                     </div>
-
                        </a>
-
                   @endforeach
                   </div>
-
-           
             </div>
         </div>
-    
-
         </div> 
       </div>
     </div>
   </div>
 </div>
-
-
 @endsection

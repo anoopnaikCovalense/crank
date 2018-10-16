@@ -48,7 +48,6 @@ editor.setReadOnly(true);
  
         </div>
       </div>
-     
       <div class="col-md-6" style="height:91.7vh">
         <div class="card" style="height:91.7vh">
             <div class="card-header bg-indigo text-white float-left">
@@ -60,9 +59,7 @@ editor.setReadOnly(true);
             </div>
               
             </div>
-        </div> 
-      
-      
+        </div>      
     <div class="col-md-3" style="height:91.7vh">
         <div class="card" style="height:91.7vh">
             <div class="card-header bg-indigo text-white float-left">

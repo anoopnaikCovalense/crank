@@ -14,7 +14,7 @@
         <!-- Styles -->
         <style>
             html, body {
-                /* background-image:url('bg5.jpeg'); */
+                
                 background-color:white;
                 color: #636b6f;
                 font-family:"Times New Roman", Times, serif;

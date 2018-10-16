@@ -158,5 +158,5 @@
     </div>
   </div>
 </div>
-<div  id="loading"class="loading" style="display:none">Loading&#8230;</div>
+
 @endsection

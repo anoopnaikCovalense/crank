@@ -14,6 +14,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Auth::routes();
+Route::group(['middleware' => 'auth'], function(){
 //========================Home Controller============================
 //HomePage
  Route::get('/home', 'HomeController@index')->name('home');
@@ -34,10 +35,10 @@ Route::get('/submittedusers','SubmissionController@submitted_users')->name('subm
  //set status Accept or reject
  Route::get('/setstatus','SubmissionController@set_status')->name('setstatus');
 //========================Challenge Controller============================
-Route::group(['middleware' => 'auth'], function(){
- //Selected Challenge Details
+
+//Selected Challenge Details
  Route::get('/challenge', 'ChallengeController@challenge_details')->name('challenge');
-});
+
  //Challenges to be solved
  Route::get('/mychallenges', 'ChallengeController@mychallenges')->name('mychallenges');
  //Store new challenge
@@ -53,3 +54,4 @@ Route::group(['middleware' => 'auth'], function(){
  Route::post('/validator', 'ChallengeController@validator')->name('validator');
 //===========================================================================
 Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify')->name('verify');
+});

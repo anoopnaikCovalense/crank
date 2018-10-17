@@ -7,7 +7,8 @@
     body {
         overflow: hidden;
     }
-.sidenav {    height:auto;
+.sidenav {
+    height:auto;
     width: 0;
     position: fixed;
     z-index: 1;
@@ -56,19 +57,14 @@
         right: 0;
     }
     .buttons{
-    
-   
     padding-bottom: 50px;
-   
-    }
-   
+    } 
 </style> 
 <script  src="{{ URL::asset('js/editor.js') }}"></script>
 <script>
     function openNav() {
         document.getElementById("mySidenav").style.width = "250px";
     }
-
     function closeNav() {
         document.getElementById("mySidenav").style.width = "0";
     }
@@ -112,7 +108,6 @@
         <b>Output Format:</b><br>
         {{$challenge->opformat}}
         <br><br>
-       
       </b>
     </div>
   </div>
@@ -130,18 +125,15 @@
                 <option value="javascript">JavaScript</option>
                 </select> 
             </div>
-
         </div>
         <div style="padding: 0rem;" class="card-body">
             <div style="position:relative;height:73vh;" id="editor"></div>
                 <textarea  id="content" name="content"disabled="disabled" hidden></textarea>
             </div>
     <div class="card-footer bg-indigo  text-white text-right" style="height:10vh" >
-    <!-- <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776</span> -->
           <button type="button" class="btn btn-danger buttons"onclick="openNav()" id="Errorbutton">Error</button>
           <button type="button" style="line-height:0.5" id="Run" class="btn btn-success buttons"><i class="fa fa-play-circle"></i> Run</button>
           <button type="button"  id="Submit"class="btn btn-success buttons" disabled="disabled"><i class="fa fa-check"></i> Submit</button>
-          
     </div> 
  </form>
     </div>

@@ -2,7 +2,6 @@
 @section('content')
 <link rel="stylesheet" href="{{ URL::asset('css/main.css') }}" />
 <script src="{{ URL::asset('js/mychallenges.js') }}"></script>
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <div class="container text-center" style="  padding-top:10px;">
       <div>
@@ -33,14 +32,12 @@
               <div class="d-flex justify-content-end">
               <small ><i class="fa fa-users"></i> &nbsp; {{$challenge->count}}</small>
               </div>
-
        </div>
               @endforeach
      </div>
               @else
               <b>No Challenges Yet!!</b>
               @endif
-
     </div>
 </div>
 @endsection

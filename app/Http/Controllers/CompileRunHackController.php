@@ -34,17 +34,6 @@ class CompileRunHackController extends Controller
         // C, CPP, CPP11, CLOJURE, CSHARP, JAVA, JAVASCRIPT, HASKELL, PERL, PHP, PYTHON, RUBY
 
         //Sending request to the API to compile and run and record JSON responses
-
-        // $test = new CompileRun();
-        // $response = $test->run($hackerearth, $config); // Use this $response the way you want , it consists data in PHP Array
-
-           
-            //Printing the response
-            // echo"Status:".print_r($response,1);
-            //echo"<pre>".print_r($response,1)."</pre>";
-            //$results = print_r($response, 1);
-            //return response()->json($response);
-
             $response=array(
             "status"=>"OK",
             "output"=>"Your output is here!!",

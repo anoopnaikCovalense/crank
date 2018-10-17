@@ -31,23 +31,26 @@ class HomeController extends Controller
     public function index()
     {
         $challenges = DB::select('SELECT 
-                                        challenges.tags,
-                                        challenges.desc,
-                                        challenges.created_at,
-                                        challenges.id,
-                                        COUNT(submissions.id) AS counts,
-                                        challenges.cname,
-                                        U.name AS createdByName
-                                    FROM
-                                        challenges
-                                            LEFT JOIN
-                                        submissions ON challenge_id = challenges.id
-                                            LEFT JOIN
-                                        users U ON U.id = challenges.user_id
-                                    WHERE
-                                        challenges.active = 1
-                                    GROUP BY challenges.tags , challenges.id , challenges.desc , challenges.cname , U.name , challenges.created_at
-                                    ORDER BY challenges.id DESC;');
+        challenges.tags,
+        challenges.desc,
+        challenges.created_at,
+        challenges.id,
+        COUNT(submissions.id) AS counts,
+        challenges.cname,
+        AVG(challenges_rating.rating) as rating,
+        U.name AS createdByName
+    FROM
+        challenges
+            LEFT JOIN
+        submissions ON challenge_id = challenges.id
+            LEFT JOIN
+        users U ON U.id = challenges.user_id
+          JOIN 
+          challenges_rating on challenges_rating.challenge_id=challenges.id
+    WHERE
+        challenges.active = 1
+    GROUP BY challenges.tags , challenges.id , challenges.desc , challenges.cname , U.name , challenges.created_at
+    ORDER BY challenges.id DESC;');
         $user=user::find(Auth::user()->id);
         foreach($challenges as $challenge)
          {

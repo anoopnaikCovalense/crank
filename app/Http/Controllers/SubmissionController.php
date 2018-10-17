@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use Auth;
+use DB;
 use Illuminate\Http\Request;
 use App\Submission;
 use App\User;
@@ -26,6 +27,7 @@ class SubmissionController extends Controller
        $submit->output=$_POST['output'];
        $submit->save();
        MailController::SubmitChallenge($submit);
+       $saved=DB::insert('insert into challenges_rating (user_id,challenge_id,rating) values (?, ?,?)', [$_POST['uid'],$_POST['cid'],$_POST['rating']]);
        return redirect()->route('submissions');
   }
 
@@ -74,11 +76,7 @@ class SubmissionController extends Controller
         $challenge=Challenge::find($_REQUEST['cid']);
         $submissions=Submission::where('challenge_id','=',$_REQUEST['cid'])
         ->join('users','users.id','=','submissions.user_id')
-<<<<<<< HEAD
-        ->get(['users.name','submissions.id','submissions.status','submissions.rating']);
-=======
         ->get(['users.name','users.email','submissions.id','submissions.status','submissions.rating']);
->>>>>>> 5ab4f1f2c7db09632398995709e5240ae3c24db2
         return view('SubmittedUsers',['challenge'=>$challenge,'submission'=>$submissions]);
     }
 

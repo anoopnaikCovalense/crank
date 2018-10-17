@@ -5,9 +5,10 @@ var language;
 var cid;
 var uid;
 var output; 
+var challenge_rating;
 
 $(document).ready(function () {
-
+  $("#CSubmit").hide();
   var editor = ace.edit("editor");
   editor.setTheme("ace/theme/monokai");
   editor.getSession().setMode("ace/mode/javascript");
@@ -20,7 +21,6 @@ $(document).ready(function () {
   });
   $("#Errorbutton").hide();
   $("#Run").click(function () {
-    
     var editor = ace.edit("editor");
     var code = editor.getValue();
     var lang = $("#mode").val();
@@ -32,7 +32,6 @@ $(document).ready(function () {
         text: 'Please Enter  the Code!!!!',
         footer: '<a href>Why do I have this issue?</a>'
       })
-     
       return;
     }
     $("#loading").show();
@@ -48,6 +47,7 @@ $(document).ready(function () {
       },
       success: function (result) {
         $("#Errorbutton").hide();
+        $("#CSubmit").show();
         console.log(result);
         $("#loading").hide();
         if (result.body.exitcode!=0)
@@ -66,8 +66,7 @@ $(document).ready(function () {
         }
        } 
         else if (result.status== "OK") {
-          console.log(result) 
-          
+          console.log(result)
           $("#output").html(result.output);
           compile_status = result.status;         
           run_status=result.status;
@@ -81,32 +80,41 @@ $(document).ready(function () {
         }
       }
     });
-
   });
-  $("#Submit").click(function()
+  $("#CSubmit").click(function()
   {
-          $.ajax(
+    $(function(){
+      $("#modalRating input[name=rating]").click(function(e){
+           window.rating = $(this).val();
+           window.prevRating = rating;
+           console.log(window.rating)
+           challenge_rating=window.rating;
+       });
+      });
+      $("#Submit").click(function()
+      {
+         $.ajax(  
         {
           type:'POST',
           url:'api/store',
-          data:{output:output,uid:uid,cid:cid,code:sourcecode,cstatus:compile_status,rstatus:run_status,language:language},
+          data:{output:output,uid:uid,cid:cid,code:sourcecode,cstatus:compile_status,rstatus:run_status,language:language,rating:challenge_rating},
           error:function(_res)
           {
             alert("some error");
           },
           success:function(_response)
           {
-           
-            swal({ title: "Submit Successfully !",
-        text: "You clicked the button!",
+          swal({ title: "Submit Successfully !",
+          text: "You clicked the button!",
           type: "success"}).then(okay => {
-        if (okay) {
-    window.location.href = base_url + "/submissions";
-  }
-}) 
+                                          if (okay) {
+                                          window.location.href = base_url + "/submissions";
+                                          }
+                                          }) 
           }
-        }
-      );
+        });
+      });
+      
 });
 
 });

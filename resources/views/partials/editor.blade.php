@@ -56,12 +56,8 @@
         right: 0;
     }
     .buttons{
-    
-   
     padding-bottom: 50px;
-   
     }
-   
 </style> 
 <script  src="{{ URL::asset('js/editor.js') }}"></script>
 <script>
@@ -110,14 +106,12 @@
         {{$challenge->constraints}}
         <br><br>
         <b>Output Format:</b><br>
-        {{$challenge->opformat}}
-        <br><br>
-       
+        {{$challenge->opformat}}      
       </b>
     </div>
   </div>
 </div>
-<div class="col-md-6" style="padding:0%">
+<div class="col-md-6">
       <div class="card" style="height:92vh;width:100%">
         <div class="card-header bg-indigo  text-white float-left">
             <span>Solution</span>
@@ -136,12 +130,12 @@
             <div style="position:relative;height:73vh;" id="editor"></div>
                 <textarea  id="content" name="content"disabled="disabled" hidden></textarea>
             </div>
-    <div class="card-footer bg-indigo  text-white text-right" style="height:10vh" >
-    <!-- <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776</span> -->
+            
+    <div class="card-footer bg-indigo  text-white text-right" style="height:10vh" >   
           <button type="button" class="btn btn-danger buttons"onclick="openNav()" id="Errorbutton">Error</button>
-          <button type="button" style="line-height:0.5" id="Run" class="btn btn-success buttons"><i class="fa fa-play-circle"></i> Run</button>
-          <button type="button"  id="Submit"class="btn btn-success buttons" disabled="disabled"><i class="fa fa-check"></i> Submit</button>
-          
+          <button type="button" style="line-height:0.5" id="Run" class="btn btn-success buttons" ><i class="fa fa-play-circle"></i> Run</button>
+          <button type="button"  id="CSubmit" class="btn btn-success buttons" data-toggle="modal" data-target="#rateSolutionModal"><i class="fa fa-check"></i> Submit</button>
+          <!-- <button type="button"  id="Submit"class="btn btn-success buttons" disabled="disabled"><i class="fa fa-check"></i> Submit</button> -->
     </div> 
  </form>
     </div>
@@ -153,10 +147,47 @@
             </div>
             <div class="card-body" style="overflow-y:auto;">
                 <p id="output"></p>
+            </div>      
+<!-- modal start -->
+<div class="modal fade" id="rateSolutionModal" tabindex="-1" role="dialog" aria-labelledby="rateSolutionModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Rate the Challenge</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="rating" id="modalRating">
+            <input type="radio" id="star10" name="rating" value="10" /><label for="star10" title="Rocks!">10 stars</label>
+            <input type="radio" id="star9" name="rating" value="9" /><label for="star9" title="Rocks!">9 stars</label>
+            <input type="radio" id="star8" name="rating" value="8" /><label for="star8" title="Pretty good">8 stars</label>
+            <input type="radio" id="star7" name="rating" value="7" /><label for="star7" title="Pretty good">7 stars</label>
+            <input type="radio" id="star6" name="rating" value="6" /><label for="star6" title="Meh">6 stars</label>
+            <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Meh">5 stars</label>
+            <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Kinda bad">4 stars</label>
+            <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Kinda bad">3 stars</label>
+            <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Sucks big time">2 stars</label>
+            <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="Submit" class="btn btn-success">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- modal end -->            
             </div>
-        </div>      
     </div>
   </div>
 </div>
 <div  id="loading"class="loading" style="display:none">Loading&#8230;</div>
+<style>
+.modal-open, .modal-open .modal {
+    overflow-y: hidden !important;
+}
+</style>
+
 @endsection

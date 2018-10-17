@@ -36,7 +36,8 @@
                     <div class="text-left"><i class="fas fa-tags"style="color:black"></i>&nbsp;{{$ch->tags}}</div>
                 @endif
                 <div class="d-flex justify-content-end">
-                <small ><i class="fas fa-users"style="color:black"></i>   &nbsp; {{$ch->counts}}</small>
+                <small ><i class="fas fa-star"style="color:orange"></i> {{$ch->rating}} </small>&nbsp;&nbsp;
+                <small ><i class="fas fa-users"style="color:black"></i>&nbsp; {{$ch->counts}}</small>
                 </div>
             </a>
 

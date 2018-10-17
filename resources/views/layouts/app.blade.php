@@ -23,6 +23,7 @@
 <script type="text/javascript">
       var base_url = {!! json_encode(url('/')) !!}
 </script>
+
  <script src="{{ asset('js/app.js') }}" ></script>
  
     <!-- Fonts -->

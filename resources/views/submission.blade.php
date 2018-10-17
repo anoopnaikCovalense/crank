@@ -34,6 +34,6 @@
     <a href="#" class="list-group-item list-group-item-danger">No Submissions</a>
   </div>
 @endforelse
-  </div>
+</div>
 </div>
 @endsection

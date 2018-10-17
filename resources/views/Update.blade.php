@@ -18,13 +18,6 @@
     <label class="col-md-2" for="description">Description</label>
     <div class="col-md-10">
         <textarea style="font-size:16px" rows="4" cols="100" id="preview"  type="text"  class="form-control form-control-lg" class="description span16" value="{{$challenge->desc}}" name="description">{{$challenge->desc}}</textarea>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 29031e932d94e34974f5c76b887610bd75cd6dfa
-=======
->>>>>>> 29031e932d94e34974f5c76b887610bd75cd6dfa
     </div>
   </div>       
           <div class="row " style="padding-bottom: 30px;">

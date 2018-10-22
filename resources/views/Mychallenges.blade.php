@@ -31,7 +31,9 @@
                     <button  onclick="delete_record(this)" id="{{$challenge->id}}" id="deleteChallenge" class="btn btn-indigo" role="button"><i class="fa fa-trash-o" aria-hidden="true"></i>&nbsp;Delete</button>
                 </span>
               <div class="d-flex justify-content-end">
-              <small ><i class="fa fa-users"></i> &nbsp; {{$challenge->count}}</small>
+              <small ><i class="fas fa-star"style="color:orange"></i> {{number_format($challenge->rating,1)}} </small>&nbsp;&nbsp;
+
+              <small ><i class="fa fa-users"></i> &nbsp;{{$challenge->count}}</small>
               </div>
 
        </div>

@@ -14,7 +14,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 Auth::routes();
-Route::group(['middleware' => 'auth'], function(){
 //========================Home Controller============================
 //HomePage
  Route::get('/home', 'HomeController@index')->name('home');
@@ -31,7 +30,9 @@ Route::get('/sentoAll','MailController@sendtoAll')->name('sendtoAll');
 //Submitted Users
 Route::get('/submittedusers','SubmissionController@submitted_users')->name('submittedusers');
  //accept reject page
+
  Route::get('/accept_reject','SubmissionController@Accept_Reject')->name('accept_reject');
+
  //set status Accept or reject
  Route::get('/setstatus','SubmissionController@set_status')->name('setstatus');
 //========================Challenge Controller============================
@@ -54,4 +55,3 @@ Route::get('/submittedusers','SubmissionController@submitted_users')->name('subm
  Route::post('/validator', 'ChallengeController@validator')->name('validator');
 //===========================================================================
 Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify')->name('verify');
-});

@@ -72,7 +72,6 @@ class ChallengeController extends Controller
 
         $this->store($request);    
         return Redirect::to('home')->withInput()->withErrors(array('msg' => "Challenge Saved Sucessfully"));
-
     }
 
     /**
@@ -84,19 +83,26 @@ class ChallengeController extends Controller
         $prob = Challenge::find($_REQUEST['cid']);
         return view('partials.editor', ['challenge' => $prob]);
     }
-
-
     /**
      * Return challenges User Created
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function mychallenges()
     {
-
-        $challenges = DB::select('select count(*) count,challenges.id,
-       challenges.cname,challenges.desc,challenges.created_at FROM challenges    
-       left join submissions  on challenges.id=submissions.challenge_id where challenges.user_id=' . Auth::user()->id . ' and challenges.active=1
-       group by challenges.id,challenges.cname,challenges.desc,challenges.created_at  order by challenges.id DESC;
+                $challenges = DB::select('select 
+                                    count(*) count,
+                                    avg(challenges_rating.rating) as rating,
+                                    challenges.id,
+                                    challenges.cname,
+                                    challenges.desc,
+                                    challenges.created_at
+                                    FROM challenges 
+                                        left join submissions  
+                                        on challenges.id=submissions.challenge_id
+                                        join challenges_rating
+                                        on challenges_rating.challenge_id=challenges.id
+                                        where challenges.user_id=1 and challenges.active=1
+                                        group by challenges.id,challenges.cname,challenges.desc,challenges.created_at  order by challenges.id DESC;
       ');
         foreach ($challenges as $challenge) {
             $parsed = Carbon::parse($challenge->created_at)->diffForHumans();
@@ -104,7 +110,6 @@ class ChallengeController extends Controller
 
         }
         return view('Mychallenges', ['challenges' => $challenges]);
-
     }
 
     /**

@@ -17,6 +17,7 @@ Auth::routes();
 //========================Home Controller============================
 //HomePage
  Route::get('/home', 'HomeController@index')->name('home');
+ Route::group(['middleware' => 'auth'], function(){
 //Create Challenge
  Route::get('/newchallenge','HomeController@newchallenge')->name('newchallenge');
  //====================Mail Controller===============
@@ -32,7 +33,7 @@ Route::get('/submittedusers','SubmissionController@submitted_users')->name('subm
  //accept reject page
 
  Route::get('/accept_reject','SubmissionController@Accept_Reject')->name('accept_reject');
-
+ 
  //set status Accept or reject
  Route::get('/setstatus','SubmissionController@set_status')->name('setstatus');
 //========================Challenge Controller============================
@@ -50,7 +51,7 @@ Route::get('/submittedusers','SubmissionController@submitted_users')->name('subm
  Route::post('/edit', 'ChallengeController@edit')->name('edit');
  //Prev Details To Update
  Route::get('/prevdetails', 'ChallengeController@prevdetails')->name('prevdetails');
-
+});
  //validator
  Route::post('/validator', 'ChallengeController@validator')->name('validator');
 //===========================================================================

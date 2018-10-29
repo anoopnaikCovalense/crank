@@ -12,7 +12,7 @@
   <link rel="icon" type="image/ico" href="crank.ico"/>
 <link rel="stylesheet" href="{{ URL::asset('css/main.css') }}" />
 
-    <!-- CSRF Token -->
+
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>
@@ -26,7 +26,6 @@
 
  <script src="{{ asset('js/app.js') }}" ></script>
  
-    <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 

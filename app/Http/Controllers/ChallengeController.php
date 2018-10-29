@@ -118,12 +118,6 @@ class ChallengeController extends Controller
 
     }
 
-    /**
-     * Editing a particular response based on challenge id
-     *
-     * @param Request $request
-     * @return \Illuminate\Http\RedirectResponse
-     */
 
     public function edit(Request $request)
     {
@@ -145,13 +139,6 @@ class ChallengeController extends Controller
         return redirect()->route('mychallenges');
     }
 
-    /**
-     *
-     * Soft Deleting a challenge
-     *
-     * @param Request $request
-     * @return string
-     */
     public function delete(Request $request)
     {
 

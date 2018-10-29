@@ -9,21 +9,16 @@ use Symfony\Component\HttpFoundation\Response;
 
 class CompileRunHackController extends Controller
 {
-    /**
-     * 3rd party API call for code compilation and run
-     * @return \Illuminate\Http\JsonResponse
-     */
+    
     public function comp_run()
     {
 
 
         $hackerearth = Array(
-            'client_secret' => '744febc349b91372c7297a544700e223df192413', //(REQUIRED) Obtain this by registering your app at http://www.hackerearth.com/api/register/
+            'client_secret' => '744febc349b91372c7297a544700e223df192413',
             'time_limit' => '5',   //(OPTIONAL) Time Limit (MAX = 5 seconds )
             'memory_limit' => '262144'  //(OPTIONAL) Memory Limit (MAX = 262144 [256 MB])
         );
-
-        //Feeding Data Into Hackerearth API
 
         $config = Array();
         $config['time'] = '5';        //(OPTIONAL) Your time limit in integer and in unit seconds
@@ -31,9 +26,6 @@ class CompileRunHackController extends Controller
         $config['source'] = $_POST['code'];    //(REQUIRED) Your properly formatted source code for which you want to use hackerEarth api
         $config['input'] = '';        //(OPTIONAL) Properly Formatted Input against which you have to test your source code, leave this empty if you are using file
         $config['language'] = strtoupper($_POST['lang']);   //(REQUIRED) Choose any one of the below
-        // C, CPP, CPP11, CLOJURE, CSHARP, JAVA, JAVASCRIPT, HASKELL, PERL, PHP, PYTHON, RUBY
-
-        //Sending request to the API to compile and run and record JSON responses
             $response=array(
             "status"=>"OK",
             "output"=>"Your output is here!!",

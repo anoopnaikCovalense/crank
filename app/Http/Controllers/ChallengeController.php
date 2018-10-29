@@ -14,11 +14,6 @@ use Carbon\Carbon;
 class ChallengeController extends Controller
 {
 
-    /**
-     * Store Challenge
-     * @param Request $request
-     * @return \Illuminate\Http\RedirectResponse
-     */
     public function store(Request $request)
     {
         
@@ -37,11 +32,6 @@ class ChallengeController extends Controller
         MailController::createNewChallenge($challenge);
     }
 
-    /**
-     * Challenge validator
-     * @param Request $request
-     * @return $this
-     */
     protected function validator(Request $request)
     {
 
@@ -75,10 +65,6 @@ class ChallengeController extends Controller
 
     }
 
-    /**
-     * Selected Challenge Details to Solve
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
     public function challenge_details()
     {
         $prob = Challenge::find($_REQUEST['cid']);
@@ -86,10 +72,6 @@ class ChallengeController extends Controller
     }
 
 
-    /**
-     * Return challenges User Created
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
     public function mychallenges()
     {
 
@@ -107,10 +89,6 @@ class ChallengeController extends Controller
 
     }
 
-    /**
-     * Prev challenge Details to update
-     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
-     */
     public function prevdetails()
     {
         $challenges = Challenge::find($_REQUEST['cid']);
@@ -118,12 +96,6 @@ class ChallengeController extends Controller
 
     }
 
-    /**
-     * Editing a particular response based on challenge id
-     *
-     * @param Request $request
-     * @return \Illuminate\Http\RedirectResponse
-     */
 
     public function edit(Request $request)
     {
@@ -145,13 +117,6 @@ class ChallengeController extends Controller
         return redirect()->route('mychallenges');
     }
 
-    /**
-     *
-     * Soft Deleting a challenge
-     *
-     * @param Request $request
-     * @return string
-     */
     public function delete(Request $request)
     {
 

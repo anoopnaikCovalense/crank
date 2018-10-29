@@ -1,4 +1,27 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.3/css/mdb.min.css);
+.active-indigo-2 input[type=text]:focus:not([readonly]) {
+  border-bottom: 1px solid #ce93d8;
+  box-shadow: 0 1px 0 0 #ce93d8;
+}
+.btn-circle.btn-xl {
+  width:50px;
+  height: 50px;
+  padding: 8px 12px;
+  border-radius: 35px;
+  font-size: 24px;
+  line-height: 1.33;
+}
+
+.btn-circle {
+  width: 20px;
+  height: 20px;
+  padding: 2px 0px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 1.42857;
+}
+
 /* Absolute Center Spinner */
 .loading {
   position: fixed;
@@ -195,3 +218,36 @@ margin-bottom: 1%;
         color: green;
         font-weight: bold;
     }
+
+    form#smileys input[type="radio"] {
+      -webkit-appearance: none;
+      width: 90px;
+      height: 90px;
+      border: none;
+      cursor: pointer;
+      transition: border .2s ease;
+      -webkit-filter: grayscale(100%);
+              filter: grayscale(100%);
+      margin: 0 5px;
+      transition: all .2s ease;
+    }
+    form#smileys input[type="radio"]:hover, form#smileys input[type="radio"]:checked {
+      -webkit-filter: grayscale(0);
+              filter: grayscale(0);
+    }
+    form#smileys input[type="radio"]:focus {
+      outline: 0;
+    }
+    form#smileys input[type="radio"].happy {
+      background: url("https://res.cloudinary.com/turdlife/image/upload/v1492864443/happy_ampvnc.svg") center;
+      background-size: cover;
+    }
+    form#smileys input[type="radio"].neutral {
+      background: url("https://res.cloudinary.com/turdlife/image/upload/v1492864443/neutral_t3q8hz.svg") center;
+      background-size: cover;
+    }
+    form#smileys input[type="radio"].sad {
+      background: url("https://res.cloudinary.com/turdlife/image/upload/v1492864443/sad_bj1tuj.svg") center;
+      background-size: cover;
+    }
+    

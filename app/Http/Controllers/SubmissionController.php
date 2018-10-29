@@ -25,6 +25,7 @@ class SubmissionController extends Controller
        $submit->challenge_id=$_POST['cid'];
        $submit->user_id=$_POST['uid'];
        $submit->output=$_POST['output'];
+       $submit->time_taken=$_POST['time_taken'];
        $submit->save();
        MailController::SubmitChallenge($submit);
        $saved=DB::insert('insert into challenges_rating (user_id,challenge_id,rating) values (?, ?,?)', [$_POST['uid'],$_POST['cid'],$_POST['rating']]);

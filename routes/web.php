@@ -20,6 +20,8 @@ Auth::routes();
  Route::group(['middleware' => 'auth'], function(){
 //Create Challenge
  Route::get('/newchallenge','HomeController@newchallenge')->name('newchallenge');
+ //User Feedback
+ Route::post('/feedback','HomeController@feedback')->name('feedback');
  //====================Mail Controller===============
  Route::get('/send','MailController@send')->name('send');
 Route::get('/sentoAll','MailController@sendtoAll')->name('sendtoAll');

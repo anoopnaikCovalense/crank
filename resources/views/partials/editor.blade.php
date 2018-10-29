@@ -7,6 +7,11 @@
     body {
         overflow: hidden;
     }
+    #timer{
+        color:white;
+        text-align:center;
+        font-weight: bold;
+    }
 .sidenav {    height:auto;
     width: 0;
     position: fixed;
@@ -61,6 +66,9 @@
 </style> 
 <script  src="{{ URL::asset('js/editor.js') }}"></script>
 <script>
+
+
+
     function openNav() {
         document.getElementById("mySidenav").style.width = "250px";
     }
@@ -90,6 +98,7 @@
         <div class="card-body" style="overflow-y:auto;padding-left:10px">
         <textarea id="challengeid" hidden>{{$challenge->id}}</textarea>
         <textarea id="userid" hidden>{{Auth::user()->id}}</textarea>
+        <textarea id="time" hidden>{{$challenge->time}}</textarea>
         <b>Name:</b><br>
         {{$challenge->cname}}
         <br><br>
@@ -113,8 +122,10 @@
 </div>
 <div class="col-md-6">
       <div class="card" style="height:92vh;width:100%">
-        <div class="card-header bg-indigo  text-white float-left">
-            <span>Solution</span>
+        <div class="card-header bg-indigo  text-white ">
+            <label>Solution</label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+            <i class="fa fa-clock"></i>
+            <label id="timer"></label>
             <div  class=" float-right" style="width:30%">
                 <select class="custom-select" id="mode" >
                 <option  value="python">PYTHON</option>
@@ -135,12 +146,11 @@
           <button type="button" class="btn btn-danger buttons"onclick="openNav()" id="Errorbutton">Error</button>
           <button type="button" style="line-height:0.5" id="Run" class="btn btn-success buttons" ><i class="fa fa-play-circle"></i> Run</button>
           <button type="button"  id="CSubmit" class="btn btn-success buttons" data-toggle="modal" data-target="#rateSolutionModal"><i class="fa fa-check"></i> Submit</button>
-          <!-- <button type="button"  id="Submit"class="btn btn-success buttons" disabled="disabled"><i class="fa fa-check"></i> Submit</button> -->
     </div> 
  </form>
     </div>
 </div>
-    <div class="col-md-3">
+    <div class="col-md-3">        
         <div class="card"  style="height:92vh">
             <div class="card-header bg-indigo  text-white " style="height:10vh">
                 Output
@@ -189,5 +199,4 @@
     overflow-y: hidden !important;
 }
 </style>
-
 @endsection

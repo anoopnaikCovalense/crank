@@ -32,11 +32,11 @@ class ChallengeController extends Controller
         $challenge->testcaseipformat = $request->get('testcaseipformat');
         $challenge->testcaseopformat = $request->get('testcaseopformat');
         $challenge->tags = ($request->get('tags'));
+        $challenge->time = $request->get('time');
         $challenge->user_id = Auth::user()->id;
         $challenge->save();
         MailController::createNewChallenge($challenge);
     }
-
     /**
      * Challenge validator
      * @param Request $request
@@ -55,6 +55,7 @@ class ChallengeController extends Controller
             'testcaseipformat' => 'required|min:5',
             'testcaseopformat' => 'required|min:5',
             'tags' => 'required|min:5',
+            'time' => 'required',
         ], [
             'cname.required' => 'Challenge  is required',
 
@@ -68,6 +69,7 @@ class ChallengeController extends Controller
             'testcaseipformat.required' => 'Test Case Input format  is required',
             'testcaseopformat.required' => 'Test Case Optput format  is required',
             'tags.required' => 'Tags is required',
+            'time.required' => 'Time is required',
         ]);
 
         $this->store($request);    

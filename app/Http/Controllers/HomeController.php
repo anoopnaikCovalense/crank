@@ -35,7 +35,7 @@ class HomeController extends Controller
         challenges.desc,
         challenges.created_at,
         challenges.id,
-        COUNT(submissions.id) AS counts,
+        COUNT(distinct(submissions.id))  AS counts,
         challenges.cname,
         AVG(challenges_rating.rating) as rating,
         U.name AS createdByName
@@ -43,9 +43,9 @@ class HomeController extends Controller
         challenges
             LEFT JOIN
         submissions ON challenge_id = challenges.id
-            LEFT JOIN
+            LEFT JOIN   
         users U ON U.id = challenges.user_id
-          JOIN 
+          LEFT JOIN 
           challenges_rating on challenges_rating.challenge_id=challenges.id
     WHERE
         challenges.active = 1
@@ -81,6 +81,16 @@ class HomeController extends Controller
     {
         return view ('Update');
     }
-    
+    public function feedback()
+    {
+       
+        DB::table('userfeedback')->insert(
+            ['user_id' => Auth::user()->id,
+             'rating' => $_POST['smiley'],
+             'suggestion'=> $_POST['suggestion']]
+        );
+        return redirect()->route('home');
+
+    }
 
 }

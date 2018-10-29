@@ -18,19 +18,11 @@ class CompileRunController extends Controller
         //Feeding Data Into Hackerearth API
 
         $config = Array();
-        $config['source'] = $_POST['code'];    //(REQUIRED) Your properly formatted source code for which you want to use hackerEarth api
+        $config['source'] = $_POST['code'];   
         $config['language'] = strtolower($_POST['lang']);   
 
-        //Sending request to the API to compile and run and record JSON responses
-
         $test = new CompileRun();
-        $response = $test->run($config); // Use this $response the way you want , it consists data in PHP Array
-        //   $response=array(
-        //     "status"=>"OK",
-        //     "output"=>"Your output is here!!",
-        //     "body"=>array("run_status"=>array("compile_status"=>"OK","stderr"=>"","status_detail"=>"OK")));
-        //     return  $response;
-
+       
         if ($response['status'] == "Successful") {
             return response()->json(['message' => 'success', 'status' => Response::$statusTexts['200'], 'code' => Response::HTTP_OK, 'body' => $response, 'output' => $response['stdout']], Response::HTTP_OK);
         } else {

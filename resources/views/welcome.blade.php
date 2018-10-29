@@ -62,9 +62,7 @@
             }
         </style>
     </head>
-    <body>
-      
-           
+    <body>           
             <div class="content" style="padding-top:70px">
                 <div class="title m-b-md">  
                 <img src="crank.jpg"  height="200" width="320">
@@ -80,6 +78,7 @@
                     @endauth
                 </div>
             @endif
+
         </div>
     </body>
 </html>

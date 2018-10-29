@@ -26,7 +26,6 @@ class CompileRunHackController extends Controller
         $config['source'] = $_POST['code'];    //(REQUIRED) Your properly formatted source code for which you want to use hackerEarth api
         $config['input'] = '';        //(OPTIONAL) Properly Formatted Input against which you have to test your source code, leave this empty if you are using file
         $config['language'] = strtoupper($_POST['lang']);   //(REQUIRED) Choose any one of the below
-        
             $response=array(
             "status"=>"OK",
             "output"=>"Your output is here!!",

@@ -49,7 +49,7 @@ Route::group(['middleware' => 'auth'], function(){
  //Prev Details To Update
  Route::get('/prevdetails', 'ChallengeController@prevdetails')->name('prevdetails');
 
- //validator
+
  Route::post('/validator', 'ChallengeController@validator')->name('validator');
 //===========================================================================
 Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify')->name('verify');

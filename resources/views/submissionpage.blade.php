@@ -18,29 +18,29 @@ editor.setReadOnly(true);
                 <b>Challenge</b>
             </div>
             <div class="card-body" style="overflow-y:auto;padding-left:10px">
-        @if(isset($challenge))   
-        <b>Name:</b><br>
-        {{$challenge->cname}}
-        <br><br>
-        <b>Description:</b><br>
-        {{$challenge->desc}}
-        <br><br>
-        <b>Problem Statement:</b><br>
-        {{$challenge->statement}}
-        <br><br>
-        <b>Input format:</b><br>
-          {{$challenge->ipformat}}
-        <br><br>
-        <b>Constraints:</b><br>
-        {{$challenge->constraints}}
-        <br><br>
-        <b>Output Format:</b><br>
-        {{$challenge->opformat}}
-        <br><br>
-        <b>Tags:</b><br>
-      {{$challenge->tags}}
-        <br><br>
-      </b>
+             @if(isset($challenge))   
+            <b>Name:</b><br>
+            {{$challenge->cname}}
+            <br><br>
+            <b>Description:</b><br>
+            {{$challenge->desc}}
+            <br><br>
+             <b>Problem Statement:</b><br>
+            {{$challenge->statement}}
+             <br><br>
+            <b>Input format:</b><br>
+            {{$challenge->ipformat}}
+            <br><br>
+            <b>Constraints:</b><br>
+            {{$challenge->constraints}}
+            <br><br>
+            <b>Output Format:</b><br>
+            {{$challenge->opformat}}
+            <br><br>
+            <b>Tags:</b><br>
+            {{$challenge->tags}}
+            <br><br>
+            </b>
       @else 
       <strong>No Submissions Yet..!!!</strong>
       @endif  

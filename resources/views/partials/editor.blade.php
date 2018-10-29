@@ -58,7 +58,59 @@
     }
     .buttons{
     padding-bottom: 50px;
-    } 
+    }
+
+.rate {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+input {
+  display: none;
+}
+
+label {
+  float: right;
+  font-size: 0;
+  color: #d9d9d9;
+}
+
+label:before {
+  content: "\f005";
+  font-family: FontAwesome;
+  font-size: 40px;
+}
+
+label:hover,
+label:hover ~ label {
+  color: #fcd000;
+  transition: 0.2s;
+}
+
+input:checked ~ label {
+  color: #ccac00;
+}
+
+input:checked ~ label:hover,
+input:checked ~ label:hover ~ label {
+  color: #fcd000;
+  transition: 0.2s;
+}
+
+
+/* Half-star*/
+
+.star-half {
+  position: relative;
+}
+
+.star-half:before {
+  position: absolute;
+  content: "\f089";
+  padding-right: 0;
+} 
 </style> 
 <script  src="{{ URL::asset('js/editor.js') }}"></script>
 <script>
@@ -145,6 +197,39 @@
             </div>
             <div class="card-body" style="overflow-y:auto;">
                 <p id="output"></p>
+            </div>
+            <div class="card-footer bg indigo">          
+            <fieldset class="rate">
+                <input id="rate3-star10" type="radio" name="rate3" value="5" />
+                <label for="rate3-star10" title="Awesome">10</label>
+
+                <input id="rate3-star9" type="radio" name="rate3" value="9" />
+                <label for="rate3-star9" title="Excellent">9</label>
+
+                <input id="rate3-star8" type="radio" name="rate3" value="8" />
+                <label for="rate3-star8" title="Very good">8</label>
+
+                <input id="rate3-star7" type="radio" name="rate3" value="7" />
+                <label for="rate3-star7" title="Good">7</label>
+
+                <input id="rate3-star6" type="radio" name="rate3" value="6" />
+                <label for="rate3-star6" title="Satisfactory">6</label>
+
+                <input id="rate3-star5" type="radio" name="rate3" value="5" />
+                <label for="rate3-star5" title="Unsatisfactory">5</label>
+
+                <input id="rate3-star4" type="radio" name="rate3" value="4" />
+                <label for="rate3-star4" title="Bad">4</label>
+
+                <input id="rate3-star3" type="radio" name="rate3" value="3" />
+                <label for="rate3-star3" title="Very bad">3</label>
+
+                <input id="rate3-star2" type="radio" name="rate3" value="2" />
+                <label for="rate3-star2" title="Awful">2</label>
+
+                <input id="rate3-star1" type="radio" name="rate3" value="1" />
+                <label for="rate3-star1" title="Horrific">1</label>
+            </fieldset>
             </div>
         </div>      
     </div>

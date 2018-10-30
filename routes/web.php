@@ -53,3 +53,7 @@ Route::group(['middleware' => 'auth'], function(){
  Route::post('/validator', 'ChallengeController@validator')->name('validator');
 //===========================================================================
 Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify')->name('verify');
+
+Route::get('/mcq', 'HomeController@mcq')->name('mcq');
+
+Route::get('/newmcq', 'HomeController@newmcq')->name('newmcq');

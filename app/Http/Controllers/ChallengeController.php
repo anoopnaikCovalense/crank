@@ -36,8 +36,10 @@ class ChallengeController extends Controller
         $challenge->save();
         MailController::createNewChallenge($challenge);
     }
-
-    /**
+   
+   
+  
+   /**
      * Challenge validator
      * @param Request $request
      * @return $this

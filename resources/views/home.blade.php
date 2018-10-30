@@ -16,6 +16,8 @@
                     <a href="{{route('submissions')}}" class="btn btn-indigo" style="line-height: 1;">My Submissions </a>     
                 
                     <a href="{{route('mychallenges')}}" class="btn btn-indigo" style="line-height: 1;">My Challenges </a>
+
+                    <a href="{{route('mcq')}}" class="btn btn-indigo" style="line-height: 1;">MCQ'S </a>
             </div>
     </div>
     &nbsp;

@@ -78,6 +78,17 @@ class HomeController extends Controller
     {
         return view ('Update');
     }
+   
+   
+
+    public function mcq()
+   {
+       return view('mcq');
+   }
+   public function newmcq()
+   {
+       return view('newmcq');
+   }
     
 
 }

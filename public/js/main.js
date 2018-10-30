@@ -10,3 +10,20 @@ $(document).ready(function() {
         e.stopPropagation();
     });
 });
+
+
+
+
+$('#add').click(function() {
+    $(".card").hide();
+});
+
+// $('.cardBox').on('click', '.addMore', function() {
+//     if ($('form .fieldGroup').length > maxGroup) {
+//       alert('Maximum ' + maxGroup + ' groups are allowed.');
+//       return; // Exit
+//     }
+//     $(this).closest(".card").find('.fieldGroup:last').after(fieldTemplate); // TAKIT: Modified here
+//   });
+  
+//   $('.add').trigger('click');

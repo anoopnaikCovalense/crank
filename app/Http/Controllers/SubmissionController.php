@@ -20,6 +20,7 @@ class SubmissionController extends Controller
        $submit->code =$_POST['code'];
        $submit->language =$_POST['language'];
        $submit->cstatus = $_POST['cstatus'];
+       
        $submit->rstatus= $_POST['rstatus'];
        $submit->challenge_id=$_POST['cid'];
        $submit->user_id=$_POST['uid'];
@@ -110,6 +111,10 @@ class SubmissionController extends Controller
             $submission->rating=$_REQUEST['rating'];
         $submission->save();
         return redirect()->route('submittedusers',['submission'=>$submission,'cid'=>$submission->challenge_id]);
+    }
+    public function mcqsub()
+    {
+        return view('mcqsubmission');
     }
 
 }

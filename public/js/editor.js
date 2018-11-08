@@ -32,7 +32,6 @@ $(document).ready(function () {
         text: 'Please Enter  the Code!!!!',
         footer: '<a href>Why do I have this issue?</a>'
       })
-     
       return;
     }
     $("#loading").show();

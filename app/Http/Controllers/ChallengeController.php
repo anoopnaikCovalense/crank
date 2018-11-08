@@ -167,5 +167,9 @@ class ChallengeController extends Controller
 
 
     }
+    public function newmcq()
+    {
+        return view('newmcq');
+    }
 
 }

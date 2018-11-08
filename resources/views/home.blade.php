@@ -1,11 +1,10 @@
 @extends('layouts.app')
 @section('content')
-<script type="text/javascript" src="{{ URL::asset('js/searchbar.js') }}"></script>
 <link rel="stylesheet" href="{{ URL::asset('css/main.css') }}"/>
 <div class="container text-center" style="  padding-top:10px;"><div>
 <div>
-<a href="http://www.covalense.com"><img src="https://dummyimage.com/728x90/9e9e9e/ffffff.png&text=728x90+Advertisement+Unit+Goes+Here!"></a>
-</div>
+<a href="http://www.covalense.com"><img src="https://dummyimage.com/728x90/9e9e9e/ffffff.png&text=728x90+Advertisement+Unit+Goes+Here!"></a></div>
+
      <div class="row">
             <div class="col-md-6 text-left" style="padding-top:15px">
             </div>
@@ -16,6 +15,8 @@
                     <a href="{{route('submissions')}}" class="btn btn-indigo" style="line-height: 1;">My Submissions </a>     
                 
                     <a href="{{route('mychallenges')}}" class="btn btn-indigo" style="line-height: 1;">My Challenges </a>
+                    <a href="{{route('mcq')}}" class="btn btn-indigo" style="line-height: 1;">MCQ'S </a>
+
             </div>
     </div>
     &nbsp;

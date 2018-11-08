@@ -17,6 +17,8 @@ Auth::routes();
 //========================Home Controller============================
 //HomePage
  Route::get('/home', 'HomeController@index')->name('home');
+ Route::get('/solve', 'HomeController@solve')->name('solve');
+
 //Create Challenge
  Route::get('/newchallenge','HomeController@newchallenge')->name('newchallenge');
  //====================Mail Controller===============
@@ -53,3 +55,14 @@ Route::group(['middleware' => 'auth'], function(){
  Route::post('/validator', 'ChallengeController@validator')->name('validator');
 //===========================================================================
 Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify')->name('verify');
+Route::get('/mcq','HomeController@mcq')->name('mcq');
+Route::get('/newmcq', 'ChallengeController@newmcq')->name('newmcq');
+Route::post('/newmcqs', 'mcqcontroller@store')->name('newmcqs');
+// Route::post('/store', 'mcqoptioncontroller@store')->name('store');
+//Route::get('/test', 'mcqquestioncontroller@test')->name('test');
+Route::post('blah', 'HomeController@blah');
+
+
+Route::get('/solvemcqs', 'mcqcontroller@solvemcqs')->name('solvemcqs');
+Route::get('/mcqsubmissions', 'HomeController@mcq_submissions')->name('mcqsubmissions');
+Route::get('/mcqsub','SubmissionController@mcqsub')->name('mcqsub');

@@ -116,5 +116,6 @@ class SubmissionController extends Controller
     {
         return view('mcqsubmission');
     }
+  
 
 }

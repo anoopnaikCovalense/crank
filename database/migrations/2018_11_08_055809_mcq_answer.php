@@ -18,6 +18,7 @@ class McqAnswer extends Migration
              $table->integer('mcq_question_id')->unsigned()->index();
              $table->foreign('mcq_question_id')->references('id')->on('mcq_questions')->onDelete('CASCADE');
              $table->longText('option');
+               $table->integer('user_id')->unsigned()->index();
              $table->integer('mcq_submission_id')->unsigned()->index();
              $table->foreign('mcq_submission_id')->references('id')->on('mcq_submissions')->onDelete('CASCADE');
              $table->timestamps();

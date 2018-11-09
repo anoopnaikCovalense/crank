@@ -16,6 +16,7 @@
                 
                     <a href="{{route('mychallenges')}}" class="btn btn-indigo" style="line-height: 1;">My Challenges </a>
                     <a href="{{route('mcq')}}" class="btn btn-indigo" style="line-height: 1;">MCQ'S </a>
+                    <a href="{{route('mcqsub')}}" class="btn btn-indigo" style="line-height: 1;">MCQ'S Score</a>
 
             </div>
     </div>

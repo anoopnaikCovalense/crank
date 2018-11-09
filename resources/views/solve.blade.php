@@ -1,4 +1,5 @@
-
+@extends('layouts.app')
+@section('content')
 <div class="container">
     <div id="quiz1">
    
@@ -33,3 +34,5 @@ $("#quiz1").dlxQuiz({
     
 });
 </script>
+
+@endsection

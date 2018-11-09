@@ -276,6 +276,7 @@
           url: 'api/ans_store',
           data: {answer:JSON.stringify(actual_answer_ids)},
           success:function(_response){
+            // document.location='./mcq_details';
               // console.log("done");
           }
         });

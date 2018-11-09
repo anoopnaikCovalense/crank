@@ -66,3 +66,4 @@ Route::post('blah', 'HomeController@blah');
 Route::get('/solvemcqs', 'mcqcontroller@solvemcqs')->name('solvemcqs');
 Route::get('/mcqsubmissions', 'HomeController@mcq_submissions')->name('mcqsubmissions');
 Route::get('/mcqsub','SubmissionController@mcqsub')->name('mcqsub');
+Route::get('/mcq_details', 'mcqcontroller@mcq_details')->name('mcq_details');

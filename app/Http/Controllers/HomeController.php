@@ -92,5 +92,13 @@ class HomeController extends Controller
         return redirect()->route('home');
 
     }
+    public function solve()
+    {
+        return view('solve2');
+    }
+    public function mcqscore()
+    {
+        return view(' mcqscore');
+    }
 
 }

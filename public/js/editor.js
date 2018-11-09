@@ -6,67 +6,76 @@ var cid;
 var uid;
 var output; 
 var challenge_rating;
-var current_minutes;
-var time;
+var minutes;
 var time_taken;
-var temp;
+var current_minutes;
+var seconds =00;
+var t;
+var timer_is_on = 0;
+function timedCount() {
+    if(seconds<10)
+    document.getElementById('txt').innerHTML =(current_minutes)+":0"+seconds;
+    else
+    document.getElementById('txt').innerHTML =(current_minutes)+":"+seconds;
+    if(seconds>0)
+    seconds = seconds - 1;
+    if(seconds==00 && current_minutes>0)
+    {
+      document.getElementById('txt').innerHTML =(current_minutes)+":00";
+      current_minutes=current_minutes-1;seconds=59;
+      
+    }
+    if(seconds==00 && current_minutes==0)
+    {
+      swal({
+        type: 'error',
+        title: 'Time Up...!',
+        text: 'Thank you',
+      })
+      var editor = ace.edit("editor");
+      var code = editor.getValue();
+      var lang = $("#mode").val();
+      $.ajax(  
+        {
+          type:'POST',
+          url:'api/store',
+          data:{output:"Incomplete",uid:uid,cid:cid,time_taken:0,code:code,cstatus:"Incomplete",rstatus:"Incomplete",language:lang,rating:0.0},
+          error:function(_res)
+          {
+            alert("Some Error");
+          },
+          success:function(_response)
+          {
+          swal({ title: "Submit Successfully !",
+          type: "success"}).then(okay => {
+                                          if (okay) {
+                                          window.location.href = base_url + "/submissions";
+                                          }
+                                          }) 
+          }
+        });
+
+    }
+    else
+    t = setTimeout(timedCount, 1000);    
+}
+function startCount() {
+    if (!timer_is_on) {
+        timer_is_on = 1;
+        timedCount();
+    }
+}
+
+function stopCount() {
+    clearTimeout(t);
+    timer_is_on = 0;
+}
 $(document).ready(function () {
   cid=$("#challengeid").val();
   uid=$("#userid").val();
-  time=$("#time").val();
-  countdown(time);
-  function countdown(minutes,seconds) {
-       window.seconds = (typeof seconds !== "undefined") ? seconds : 60;
-       window.mins = (typeof minutes !== "undefined") ? minutes : 0;
-      tick();
-      function tick() {
-          var counter = document.getElementById("timer");
-          current_minutes = window.mins-1;
-          window.seconds--;
-          counter.innerHTML =
-          current_minutes.toString() + ":" + (window.seconds < 10 ? "0" : "") + String(window.seconds);
-          if( window.seconds > 0 ) {
-              window.timeoutHandle=setTimeout(tick, 1000);
-          } else {
-              if(window.mins > 1){
-                 
-                //never reach “00? issue solved:Contributed by Victor Streithorst
-                window.timeoutHandle = setTimeout(function () { countdown(window.mins); }, 1000);
-              }
-              else if(current_minutes=="0" && window.seconds=="00")
-              {
-                swal({
-                  type: 'error',
-                  title: 'Time Up...!',
-                  text: 'Thank you',
-                })
-                var editor = ace.edit("editor");
-                var code = editor.getValue();
-                var lang = $("#mode").val();
-                $.ajax(  
-                  {
-                    type:'POST',
-                    url:'api/store',
-                    data:{output:"Incomplete",uid:uid,cid:cid,time_taken:0,code:code,cstatus:"Incomplete",rstatus:"Incomplete",language:lang,rating:0.0},
-                    error:function(_res)
-                    {
-                      alert("some error");
-                    },
-                    success:function(_response)
-                    {
-                    swal({ title: "Submit Successfully !",
-                    text: "You clicked the button!",
-                    type: "success"}).then(okay => {
-                                                    if (okay) {
-                                                    window.location.href = base_url + "/submissions";
-                                                    }
-                                                    }) 
-                    }
-                  });
-              }
-          }
-      }     
-    }
+  minutes=$("#time").val();
+  current_minutes=minutes;
+  startCount();
   $("#CSubmit").hide();
   var editor = ace.edit("editor");
   editor.setTheme("ace/theme/monokai");
@@ -80,7 +89,7 @@ $(document).ready(function () {
   });
   $("#Errorbutton").hide();
   $("#Run").click(function () {
-    // clearTimeout(window.timeoutHandle);
+    stopCount();
     var editor = ace.edit("editor");
     var code = editor.getValue();
     var lang = $("#mode").val();
@@ -90,7 +99,6 @@ $(document).ready(function () {
         type: 'error',
         title: 'Oops...!!!!!!',
         text: 'Please Enter  the Code!!!!',
-        footer: '<a href>Why do I have this issue?</a>'
       })
       return;
     }
@@ -106,7 +114,7 @@ $(document).ready(function () {
         $("#error").html("Some Error with API ");
       },
       success: function (result) {
-        // countdown(window.minutes, window.seconds);
+        startCount();
         $("#Errorbutton").hide();
         $("#CSubmit").show();
         console.log(result);
@@ -159,7 +167,7 @@ $(document).ready(function () {
       }
       $("#Submit").click(function()
       {
-        time_taken="00:"+pad((time-current_minutes), 2)+":"+seconds+".00";
+        time_taken="00:"+pad((minutes-current_minutes), 2)+":"+seconds+".00";
          $.ajax(  
         {
           type:'POST',

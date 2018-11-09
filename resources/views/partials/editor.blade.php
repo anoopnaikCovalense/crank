@@ -66,9 +66,6 @@
 </style> 
 <script  src="{{ URL::asset('js/editor.js') }}"></script>
 <script>
-
-
-
     function openNav() {
         document.getElementById("mySidenav").style.width = "250px";
     }
@@ -125,12 +122,12 @@
         <div class="card-header bg-indigo  text-white ">
             <label>Solution</label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
             <i class="fa fa-clock"></i>
-            <label id="timer"></label>
-            <div  class=" float-right" style="width:30%">
+            <label id="txt"></label>
+           <div  class=" float-right" style="width:30%">
                 <select class="custom-select" id="mode" >
                 <option  value="python">PYTHON</option>
                 <option  value="php">PHP</option>
-                <option value="java">Java</option>
+                <option value="java">Java</option>  
                 <option  value="csharp">C#</option>
                 <option value="javascript">JavaScript</option>
                 </select> 

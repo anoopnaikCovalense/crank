@@ -67,3 +67,7 @@ Route::get('/solvemcqs', 'mcqcontroller@solvemcqs')->name('solvemcqs');
 Route::get('/mcqsubmissions', 'HomeController@mcq_submissions')->name('mcqsubmissions');
 Route::get('/mcqsub','SubmissionController@mcqsub')->name('mcqsub');
 Route::get('/mcq_details', 'mcqcontroller@mcq_details')->name('mcq_details');
+Route::get('/mcq_display', 'mcqcontroller@mcq_display')->name('mcq_display');
+Route::get('/submittedmcq', 'mcqcontroller@submitted_mcq')->name('submittedmcq');
+Route::get('/mcqquestion', 'mcqcontroller@mcq_question')->name('mcqquestion');
+

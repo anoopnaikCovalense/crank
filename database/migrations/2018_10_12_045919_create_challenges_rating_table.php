@@ -20,7 +20,8 @@ class CreateChallengesRatingTable extends Migration
             $table->integer('challenge_id')->unsigned()->index();
             $table->foreign('challenge_id')->references('id')->on('challenges')->onDelete('CASCADE');
             $table->float('rating',3,1)->default(0.0);
-            $table->timestamps();
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
         });
     }
 

@@ -28,7 +28,8 @@ class CreateChallengesTable extends Migration
             $table->longText('tags');
             $table->integer('active')->default(1);
             $table->float('rating',3,1)->default(0.0);
-            $table->timestamps();
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'));
         });
     }
 

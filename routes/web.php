@@ -58,8 +58,13 @@ Route::get('/submittedusers','SubmissionController@submitted_users')->name('subm
  Route::post('/validator', 'ChallengeController@validator')->name('validator');
 //===========================================================================
 Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify')->name('verify');
-Route::get('/solve', 'HomeController@solve')->name('solve');
-Route::get('/mcqscore', 'HomeController@mcqscore')->name('mcqscore');
-
-
+Route::get('/mcq','HomeController@mcq')->name('mcq');
+Route::get('/newmcq', 'ChallengeController@newmcq')->name('newmcq');
+Route::get('/solvemcqs', 'mcqcontroller@solvemcqs')->name('solvemcqs');
+Route::get('/mcqsubmissions', 'HomeController@mcq_submissions')->name('mcqsubmissions');
+Route::get('/mcqsub','SubmissionController@mcqsub')->name('mcqsub');
+Route::get('/mcq_details', 'mcqcontroller@mcq_details')->name('mcq_details');
+Route::get('/mcq_display', 'mcqcontroller@mcq_display')->name('mcq_display');
+Route::get('/submittedmcq', 'mcqcontroller@submitted_mcq')->name('submittedmcq');
+Route::get('/mcqquestion', 'mcqcontroller@mcq_question')->name('mcqquestion');
 

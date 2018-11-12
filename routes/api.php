@@ -22,4 +22,7 @@ Route::post('/compile','CompileRunController@comp_run');
 
 //Store Submissison
 Route::post('/store','SubmissionController@store');
+Route::post('/ans_store','MCQController@ans_store');
+
+
 

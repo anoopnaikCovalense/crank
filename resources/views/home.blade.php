@@ -18,8 +18,9 @@
             <div class="col-md-6 text-right">
                     <a href="{{route('submissions')}}" class="btn btn-indigo" style="line-height: 1;">My Submissions </a>
                     <a href="{{route('mychallenges')}}" class="btn btn-indigo " style="line-height: 1;">My Challenges </a>
-                    <button type="button" class="btn btn-success btn-circle btn-xl" data-toggle="modal" data-target="#sideModalTRSuccessDemo" data-backdrop="false" title="Rate Me!"><i class="fa fa-thumbs-up"></i>
-                            </button>
+                    <button type="button" class="btn btn-success btn-circle btn-xl" data-toggle="modal" data-target="#sideModalTRSuccessDemo" data-backdrop="false" title="Rate Me!"><i class="fa fa-thumbs-up"></i></button>
+                    <a href="{{route('mcq')}}" class="btn btn-indigo" style="line-height: 1;">MCQ'S </a>
+                    <a href="{{route('mcq_display')}}" class="btn btn-indigo" style="line-height: 1;">MCQ'S Score</a>
             </div>
     </div>
     &nbsp;

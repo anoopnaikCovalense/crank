@@ -8,7 +8,7 @@ use App\User;
 use App\Challenge;
 use App\Submission;
 use Carbon\Carbon;
-
+use App\mcq;
 class HomeController extends Controller
 {
 
@@ -81,6 +81,7 @@ class HomeController extends Controller
     {
         return view ('Update');
     }
+
     public function feedback()
     {
        
@@ -92,13 +93,19 @@ class HomeController extends Controller
         return redirect()->route('home');
 
     }
-    public function solve()
+    
+public function mcq()
+{    
+    $mcqs=mcq::all();
+    return view ('mcq',['mcqs'=>$mcqs]);
+} 
+public function solve()
     {
-        return view('solve2');
+        return view('solve');
     }
-    public function mcqscore()
+    public function mcq_submissions()
     {
-        return view(' mcqscore');
+        return view(' mcq_submissions');
     }
 
 }

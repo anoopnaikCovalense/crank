@@ -179,13 +179,14 @@ $(document).ready(function () {
           },
           success:function(_response)
           {
-            swal({  position:'top-end',
-                    title: "Submit Successfully !",
-                    type: "success"}).then(okay => {
-                                                    if (okay) {
-                                                    window.location.href = base_url + "/submissions";
-                                                    }
-                                                    })
+            swal({ title: "Thank you!",
+        text: "Your solution has been submitted successfully.",
+          type: "success"}).then(okay => {
+        if (okay) {
+    window.location.href = base_url + "/submissions";
+  }
+}) 
+          }
         }
         });
       });

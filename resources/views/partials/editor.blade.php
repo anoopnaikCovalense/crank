@@ -108,7 +108,7 @@
         <b>Input format:</b><br>
           {{$challenge->ipformat}}
         <br><br>
-        <b>Contraints:</b><br>
+        <b>Constraints:</b><br>
         {{$challenge->constraints}}
         <br><br>
         <b>Output Format:</b><br>

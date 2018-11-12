@@ -20,6 +20,7 @@ class SubmissionController extends Controller
        $submit->code =$_POST['code'];
        $submit->language =$_POST['language'];
        $submit->cstatus = $_POST['cstatus'];
+       
        $submit->rstatus= $_POST['rstatus'];
        $submit->challenge_id=$_POST['cid'];
        $submit->user_id=$_POST['uid'];
@@ -76,10 +77,19 @@ class SubmissionController extends Controller
         $challenge=Challenge::find($_REQUEST['cid']);
         $submissions=Submission::where('challenge_id','=',$_REQUEST['cid'])
         ->join('users','users.id','=','submissions.user_id')
-        ->get(['users.name','users.email','submissions.id','submissions.status','submissions.rating']);
+        ->get(['users.name','users.email','submissions.id','submissions.status','submissions.rating','submissions.created_at']);
+        foreach( $submissions as  $submission)
+        {
+           $parsed=Carbon::parse($submission->created_at)->diffForHumans();
+           $submission->parsedTime=$parsed;
+            
+        }
+
+
+       
+
         return view('SubmittedUsers',['challenge'=>$challenge,'submission'=>$submissions]);
     }
-
     /**
      * Accept or reject
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
@@ -104,5 +114,10 @@ class SubmissionController extends Controller
         $submission->save();
         return redirect()->route('submittedusers',['submission'=>$submission,'cid'=>$submission->challenge_id]);
     }
+    public function mcqsub()
+    {
+        return view('mcqsubmission');
+    }
+  
 
 }

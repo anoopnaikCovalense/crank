@@ -24,7 +24,6 @@ class CreateSubmissionsTable extends Migration
             $table->longText('rstatus');
             $table->string('language');
             $table->longText('output');
-            $table->time('time_taken');
             $table->string('status')->default('pending');
             $table->float('rating',3,1)->default(0.0);
             $table->timestamps();

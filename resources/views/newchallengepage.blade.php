@@ -90,6 +90,15 @@
          @endif
     </div>
   </div>
+  <div class="row ">
+    <label class=" col-md-2"  for="time">Time (in Minutes)</label>
+    <div class="col-md-10">
+        <input value="{{ old('time') }}" name="time" id="time" type="number" class="span12" >
+         @if ($errors->has('time'))
+          <span class="text-danger">{{ $errors->first('time') }}</span>
+         @endif
+    </div>
+  </div>
 </div>
     <button type="submit" class="btn btn-success btn-lg btn-block"><i class="fa fa-check"></i>&nbsp;Save</button>
 </form>

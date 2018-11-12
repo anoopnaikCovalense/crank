@@ -8,7 +8,7 @@
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
-|
+|   
 */
 Route::get('/', function () {
     return view('welcome');
@@ -17,10 +17,11 @@ Auth::routes();
 //========================Home Controller============================
 //HomePage
  Route::get('/home', 'HomeController@index')->name('home');
- Route::get('/solve', 'HomeController@solve')->name('solve');
-
+ Route::group(['middleware' => 'auth'], function(){
 //Create Challenge
  Route::get('/newchallenge','HomeController@newchallenge')->name('newchallenge');
+ //User Feedback
+ Route::post('/feedback','HomeController@feedback')->name('feedback');
  //====================Mail Controller===============
  Route::get('/send','MailController@send')->name('send');
 Route::get('/sentoAll','MailController@sendtoAll')->name('sendtoAll');
@@ -32,14 +33,16 @@ Route::get('/sentoAll','MailController@sendtoAll')->name('sendtoAll');
 //Submitted Users
 Route::get('/submittedusers','SubmissionController@submitted_users')->name('submittedusers');
  //accept reject page
+
  Route::get('/accept_reject','SubmissionController@Accept_Reject')->name('accept_reject');
+ 
  //set status Accept or reject
  Route::get('/setstatus','SubmissionController@set_status')->name('setstatus');
 //========================Challenge Controller============================
-Route::group(['middleware' => 'auth'], function(){
- //Selected Challenge Details
+
+//Selected Challenge Details
  Route::get('/challenge', 'ChallengeController@challenge_details')->name('challenge');
-});
+
  //Challenges to be solved
  Route::get('/mychallenges', 'ChallengeController@mychallenges')->name('mychallenges');
  //Store new challenge
@@ -50,19 +53,13 @@ Route::group(['middleware' => 'auth'], function(){
  Route::post('/edit', 'ChallengeController@edit')->name('edit');
  //Prev Details To Update
  Route::get('/prevdetails', 'ChallengeController@prevdetails')->name('prevdetails');
-
+});
  //validator
  Route::post('/validator', 'ChallengeController@validator')->name('validator');
 //===========================================================================
 Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify')->name('verify');
 Route::get('/mcq','HomeController@mcq')->name('mcq');
 Route::get('/newmcq', 'ChallengeController@newmcq')->name('newmcq');
-Route::post('/newmcqs', 'mcqcontroller@store')->name('newmcqs');
-// Route::post('/store', 'mcqoptioncontroller@store')->name('store');
-//Route::get('/test', 'mcqquestioncontroller@test')->name('test');
-Route::post('blah', 'HomeController@blah');
-
-
 Route::get('/solvemcqs', 'mcqcontroller@solvemcqs')->name('solvemcqs');
 Route::get('/mcqsubmissions', 'HomeController@mcq_submissions')->name('mcqsubmissions');
 Route::get('/mcqsub','SubmissionController@mcqsub')->name('mcqsub');

@@ -103,7 +103,7 @@ class ChallengeController extends Controller
                                         on challenges.id=submissions.challenge_id
                                         join challenges_rating
                                         on challenges_rating.challenge_id=challenges.id
-                                        where challenges.user_id=1 and challenges.active=1
+                                        where challenges.user_id=' . Auth::user()->id . ' and challenges.active=1
                                         group by challenges.id,challenges.cname,challenges.desc,challenges.created_at  order by challenges.id DESC;
       ');
         foreach ($challenges as $challenge) {

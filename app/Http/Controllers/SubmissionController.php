@@ -103,4 +103,9 @@ class SubmissionController extends Controller
         return redirect()->route('submittedusers',['submission'=>$submission,'cid'=>$submission->challenge_id]);
     }
 
+    public function mcqsub()
+    {
+        return view('mcqsubmission');
+    }
+
 }

@@ -91,4 +91,9 @@ class HomeController extends Controller
    }
     
 
+
+   public function blah()
+   {
+       print_r($_POST);
+   }
 }

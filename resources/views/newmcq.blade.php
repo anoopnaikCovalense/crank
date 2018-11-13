@@ -1,56 +1,85 @@
 @extends('layouts.app')
 @section('content')
- <link rel="stylesheet" href="{{ URL::asset('js/main.css') }}" />
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<input type="button" id="add_question" value="Add Question" />
+<form role="form" action="blah" method="POST">
+    {{ csrf_field() }}
+    <div id="question_fileds">
+        <!-- <div class="question">
+            <div class='label'>Question 1:</div>
+            <div class="content">
+                <div class="card">
 
+                    <div class="row">      
+                        <br><label class="col-md-1" for="question">Question</label>
+                        <div class="col-md-10">
+                        
+                            <input type="text" name="challenge[questions][0][title]" value=""><br>
+                            <br> -->
 
-<div class="card">
+                            <!-- // <div class="multi-field-wrapper">
+                            //     <div class="multi-fields"> -->
+                                    <!-- <div class="multi-field">
+                            <input type="text" name="challenge[questions][0][options][0]" value=""><br>
 
-<div class="row">      
-        <br><label class="col-md-1" for="question">Question </label>
-        <div class="col-md-10">
-<input type="text" name="question" value=""><br>
-          <br>
+                            <button type="button" class="remove-field">Remove</button> 
 
-<form role="form" action="/wohoo" method="POST">
-  
-    <div class="multi-field-wrapper">
-      <div class="multi-fields">
-        <div class="multi-field">
+  </div>
+                            <button type="button" class="add-field">Add field</button> -->
 
- <input type="checkbox" class="form-check-input" id="check1" name="vehicle1" value="something">
- <label for="name">Option </label>
- <br>
-          <input type="text" name="stuff[]">
-          
-
-
-           <button type="button" class="remove-field">Remove</button> 
+  </div>  </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <br>
-      <button type="button" class="add-field">Add field</button>
-
-  </div>
-  </div>
-  </div>
-  </div>
-  </div>
-</div>
+    </div>
+    <button type="submit">Button</button>
 </form>
-<script>
-$('.multi-field-wrapper').each(function() {
-    var $wrapper = $('.multi-fields', this);
-    $(".add-field", $(this)).click(function(e) {
-        $('.multi-field:first-child', $wrapper).clone(true).appendTo($wrapper).find('input').val('').focus();
-    });
-    $('.multi-field .remove-field', $wrapper).click(function() {
-        if ($('.multi-field', $wrapper).length > 1)
-            $(this).parent('.multi-field').remove();
-    });
-});
-</script>
+<style>
+    div { padding:10px;}
+</style>
 
+<script type="text/javascript">
+    let questionCounter = 0;
+    let optionCounter = [];
+
+    $('body').on("click", "#add_question", function () {
+        questionCounter++;
+        optionCounter[questionCounter] = 0;
+
+        var question = '<div class="question"><div class="label" data-question-id="' + questionCounter + '">Question ' + questionCounter + ':</div><div class="content"><div class="card"><div class="row"><br><label class="col-md-1" for="question">Question</label><div class="col-md-10"><input type="text" name="challenge[questions][' + questionCounter + '][title]" value=""><br><br><div class="multi-field-wrapper"> <div class="multi-fields">'+
+        '<div class="multi-field"><input type="checkbox" class="form-check-input" name="challenge[questions][' + questionCounter + '][answers][' + optionCounter[questionCounter] + ']"><input type="text" data-option-id="'+ optionCounter[questionCounter] +'" name="challenge[questions][' + questionCounter + '][options][' + optionCounter[questionCounter] + ']" value=""><button type="button" class="remove-field">Remove</button> </div> <button type="button" class="add-field">Add field</button><br></div></div></div></div></div></div></div></div>';
+
+        $('#question_fileds').append(question);
+        optionCounter[questionCounter]++;
+
+        // $('#question_fileds').find("div.question:first").clone(true).appendTo("#question_fileds").find('div.multi-field').not(":first").remove();
+        // $('#question_fileds').find("div.question:last").find('input').val('').focus();
+    });
+    
+    $('#question_fileds').on("click", "button.add-field", function () {
+        //  alert("add opt");
+        // var textBox = document.getElementById("check1");
+        //     textBox.value = option;
+        //     option++;
+
+        var question_id = $(this).parent().parent().parent().parent().parent().parent().parent().find('div.label').attr('data-question-id');
+        var option_id = $(this).parent().find('div.multi-field:last').find('input[type=text]').attr('data-option-id');
+        if (isNaN(option_id))
+            option_id = 0;
+        else
+            option_id++;
+        var option = '<div class="multi-field"><input type="checkbox" class="form-check-input" name="challenge[questions][' + question_id + '][answers][' + option_id + ']"><input type="text" data-option-id="'+ option_id +'" name="challenge[questions][' + question_id + '][options][' + option_id + ']" value=""><button type="button" class="remove-field">Remove</button> </div>';
+        
+        var $wrapper = $(this).parent();
+        $(option).appendTo($wrapper).find('input').val('').focus();
+    });
+
+    $('#question_fields').on("click", "button.remove-field", function () {
+        $(this).parent().remove();
+    });
+</script>
 @endsection
+
+

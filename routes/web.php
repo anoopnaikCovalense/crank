@@ -57,3 +57,7 @@ Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify')->name('veri
 Route::get('/mcq', 'HomeController@mcq')->name('mcq');
 
 Route::get('/newmcq', 'HomeController@newmcq')->name('newmcq');
+
+Route::post('blah', 'HomeController@blah');
+
+Route::get('/mcqsub','SubmissionController@mcqsub')->name('mcqsub');
